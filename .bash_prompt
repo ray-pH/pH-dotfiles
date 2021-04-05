@@ -1,0 +1,85 @@
+# vim: ft=sh
+
+# Colors
+FG="38;5"
+BG="48;5"
+CGREY="240"
+CDARKGREY="232"
+CWHITE="15"
+CBLACK="0"
+CBLUE="32"
+CDARKBLUE="25"
+
+# ColorName
+BGDIR=$CGREY
+BGTIME=$CGREY
+BGUSER=$CBLUE
+BGFOLDER=$CWHITE
+
+FGDIR=$CWHITE
+FGTIME=$CWHITE
+FGUSER=$CWHITE
+FGFOLDER=$CGREY
+
+# Icons
+RARROW=""
+LARROW=""
+ARROW="❯"
+BRANCH=""
+RGAP=""
+LDTRIANGLE=""
+TRTRIANGLE=""
+
+# Git Colors
+CGITCLEAN=$CBLUE
+
+function git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+function gitprompt(){
+    # GIT_RAW_STATUS="$(git status --porcelain)"
+    GIT_BRANCH="$(git_branch)"
+    # GIT_STATUS="${GIT_RAW_STATUS%% *}"
+    NEXT_COLOR=$BGDIR
+    if [ -f ./.folderinfo ]; then
+	NEXT_COLOR=$BGFOLDER
+    fi
+
+    GIT_PROMPT="\e[0;$FG;$CWHITE;$BG;${CGITCLEAN}m ${BRANCH} \
+${GIT_BRANCH} \
+\e[0;$FG;$CGITCLEAN;$BG;${NEXT_COLOR}m${RARROW}\e[0m"
+
+    echo "${GIT_PROMPT}"
+}
+
+function prompt() {
+    
+    inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+
+    PROMPT_L="\e[0;$FG;${FGDIR};$BG;${BGDIR}m \w \
+\e[0;$FG;${BGDIR}m${RARROW}\e[0m"
+
+    PROMPT_R="\e[0;$FG;${BGTIME}m${LARROW}\
+\e[0;$FG;${FGTIME};$BG;${BGTIME}m \T \
+\e[0;$FG;${BGUSER};$BG;${BGTIME}m${LARROW}\
+\e[0;$FG;${FGUSER};$BG;${BGUSER}m \u \e[0m"
+
+    # show folder icon
+    if [ -f ./.folderinfo ]; then
+	FOLDER_ICON="$(head -n  1 .folderinfo)"
+	PROMPT_L="\e[0;$FG;${FGFOLDER};$BG;${BGFOLDER}m ${FOLDER_ICON} \
+\e[0;$FG;${BGFOLDER};$BG;${BGDIR}m${RARROW}\e[0m\
+${PROMPT_L}"
+    fi
+
+    # show git branch
+    if [ "$inside_git_repo" ]; then
+	PROMPT_L="$(gitprompt)${PROMPT_L}"
+    fi
+    
+    compensate=${#PROMPT_R}-13
+    PS1=$(printf "%*s\r%s\n$ARROW " "$(($(tput cols)+${compensate}))" "$PROMPT_R" "$PROMPT_L")
+}
+
+PROMPT_COMMAND=prompt
