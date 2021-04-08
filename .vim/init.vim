@@ -26,8 +26,8 @@ set splitright 			" split right
 set splitbelow 			" split below
 
 " lightline
-" let g:lightline = { 'colorscheme': 'tokyonight' }
-let g:lightline = { 'colorscheme': 'iceberg' }
+let g:lightline = { 'colorscheme': 'tokyonight' }
+" let g:lightline = { 'colorscheme': 'iceberg' }
 " let g:lightline = { 'colorscheme': 'nord' }
 
 " snippets
@@ -40,10 +40,9 @@ let g:UltiSnipsEditSplit="vertical"
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 " colorscheme tokyonight
-" colorscheme iceberg
-let g:monochrome_italic_comments = 1
-colorscheme monochrome
-
+colorscheme iceberg
+" let g:monochrome_italic_comments = 1
+" colorscheme monochrome
 
 " quickscope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

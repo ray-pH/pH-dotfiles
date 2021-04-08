@@ -239,3 +239,6 @@ function sfi(){
 }
 source "$HOME/.cargo/env"
 source /usr/share/autojump/autojump.sh
+
+
+export PATH=$PATH:$HOME/.dotnet/tools
