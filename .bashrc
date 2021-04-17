@@ -230,6 +230,7 @@ codi() {
     Codi $syntax" "$@"
 }
 
+export UGM=/media/ray/DATA/Data/UGM/
 # Custom Prompt
 source $HOME/.bash_prompt
 
@@ -239,6 +240,6 @@ function sfi(){
 }
 source "$HOME/.cargo/env"
 source /usr/share/autojump/autojump.sh
-
+# source "$HOME/.completion_bash/alacritty"
 
 export PATH=$PATH:$HOME/.dotnet/tools

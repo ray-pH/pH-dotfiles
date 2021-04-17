@@ -32,6 +32,7 @@ alias vbp='nvim ~/.bash_prompt'
 alias vi3='nvim ~/.config/i3/config'
 alias vcom='nvim ~/.config/picom.conf'
 alias vpoly='nvim ~/.config/polybar/config'
+alias vala='nvim ~/.config/alacritty/alacritty.yml'
 alias vfi='nvim ./.folderinfo'
 alias vj='nvim ~/.local/share/autojump/autojump.txt'
 alias vc='nvim /media/ray/STUFF/Texts/Linux/linux.md'
@@ -76,3 +77,4 @@ alias sshgit="ssh-add ~/.ssh/github"
 alias gitssh="ssh-add ~/.ssh/github"
 alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias gitpu="git push -u origin main"
+alias gpu="git push -u origin main"
