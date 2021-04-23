@@ -37,6 +37,8 @@ function Runscript()
         :!go run %
     elseif &ft=='julia'
         :!julia %
+    elseif &ft=='lua'
+        :!lua %
     elseif &ft=='processing'
         " :!pde --sketch=%:p:h  --run
         :!~/App/processing-3.5.4/processing-java --sketch=%:p:h --run
