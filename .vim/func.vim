@@ -47,6 +47,7 @@ function Runscript()
     endif
 endfunction
 
+command Pdf :! okular %:t:r.pdf >/dev/null 2>&1 &
 command Run :call Runscript() 
 command R :Run
 

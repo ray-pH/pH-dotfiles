@@ -11,12 +11,20 @@ font:
     normal:
         family: Hack
         style: Normal
-
     size: 11.0
-
     offset:
         x: 0
         y: 2
+
+# font:
+#     normal:
+#         family: Ubuntu Mono
+#         style: Normal
+#     size: 13.0
+#     offset:
+#         x: 0
+#         y: 4
+
 
 colors:
     primary:
@@ -25,10 +33,13 @@ colors:
 
     normal:
         black:   '#232627'
-        red:     '#ed1515'
-        green:   '#0a8b6f'
-        yellow:  '#f67400'
-        blue:    '#1d99f3'
+        # red:     '#ed1515'
+        red:     '#c0392b'
+        # green:   '#0a8b6f'
+        green:   '#1cdc9a'
+        yellow:  '#f2b422'
+        blue:    '#3DAEE9'
+        # blue:    '#1d99f3'
         magenta: '#9b59b6'
         cyan:    '#1abc9c'
         white:   '#fcfcfc'

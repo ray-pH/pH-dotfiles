@@ -311,3 +311,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id sudo $HOME/Documents/shell/manualmount.sh
 exec --no-startup-id $HOME/Documents/shell/touchpad_config.sh
 # exec --no-startup-id $HOME/Code/Latexey/linux_Latexey/Latexey
+
+# Auto-configuration for i3mag
+# bindsym $mod+minus exec php /home/ray/App/i3mag/mag.php -
+# bindsym $mod+plus exec php /home/ray/App/i3mag/mag.php +
+# exec php /home/ray/App/i3mag/mag.php init

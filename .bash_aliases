@@ -10,6 +10,9 @@ alias lsv='ls -v'
 alias qq='exit'
 alias :q='exit'
 alias jadwal='sxiv ~/Pictures/jadwal.png'
+alias ca='bat --paging=never'
+alias ba='bat --paging=never'
+alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
 
 # Typos
 alias sl='ls'
@@ -78,3 +81,6 @@ alias gitssh="ssh-add ~/.ssh/github"
 alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias gitpu="git push -u origin main"
 alias gpu="git push -u origin main"
+
+# Obscura
+alias sus="echo amogus"
