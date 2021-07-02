@@ -40,6 +40,7 @@ alias vfi='nvim ./.folderinfo'
 alias vj='nvim ~/.local/share/autojump/autojump.txt'
 alias vc='nvim /media/ray/STUFF/Texts/Linux/linux.md'
 alias vlinux='vc'
+alias blinux='bat /media/ray/STUFF/Texts/Linux/linux.md'
 # alias vtex='nvim ~/Code/LaTeX/sketchboard/sketch.tex'
 
 # Commands
@@ -83,4 +84,4 @@ alias gitpu="git push -u origin main"
 alias gpu="git push -u origin main"
 
 # Obscura
-alias sus="echo amogus"
+alias sus="cat ~/Documents/shell/sus"

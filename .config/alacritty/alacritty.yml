@@ -1,6 +1,6 @@
 env:
-    # TERM: alacritty
-    TERM: xterm-256color
+    TERM: alacritty
+    # TERM: xterm-256color
 
 window:
     padding:
@@ -23,7 +23,7 @@ font:
 #     size: 13.0
 #     offset:
 #         x: 0
-#         y: 4
+        # y: 2
 
 
 colors:
@@ -33,13 +33,16 @@ colors:
 
     normal:
         black:   '#232627'
-        # red:     '#ed1515'
-        red:     '#c0392b'
-        # green:   '#0a8b6f'
-        green:   '#1cdc9a'
-        yellow:  '#f2b422'
-        blue:    '#3DAEE9'
-        # blue:    '#1d99f3'
+        red:     '#ed1515'
+        # red:     '#c0392b'
+        green:   '#0a8b6f'
+        # green:   '#0ccc8a'
+        # green:   '#1cdc9a'
+        # yellow:  '#f67400'
+        yellow:  '#f6a422'
+        # yellow:  '#f2b422'
+        blue:    '#1d99f3'
+        # blue:    '#3DAEE9'
         magenta: '#9b59b6'
         cyan:    '#1abc9c'
         white:   '#fcfcfc'

@@ -306,7 +306,8 @@ exec --no-startup-id picom --experimental-backends --backend glx
 exec --no-startup-id parcellite
 exec --no-startup-id dunst
 # exec_always --no-startup-id $HOME/Documents/shell/randwallpaper.sh
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/rainforest.jpg
+# exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/rainforest.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/sorai.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id sudo $HOME/Documents/shell/manualmount.sh
 exec --no-startup-id $HOME/Documents/shell/touchpad_config.sh
