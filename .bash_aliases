@@ -14,6 +14,7 @@ alias jadwal='sxiv ~/Pictures/jadwal.png'
 alias ca='bat --paging=never'
 alias ba='bat --paging=never'
 alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
+alias vimv='vimv -v'
 
 # Typos
 alias sl='ls'
