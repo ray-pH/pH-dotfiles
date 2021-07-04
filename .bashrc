@@ -234,6 +234,11 @@ export UGM=/media/ray/DATA/Data/UGM/
 # Custom Prompt
 source $HOME/.bash_prompt
 
+# Copy file path
+function yy(){
+    readlink -fn "$1" | xclip -selection c
+}
+
 # Set Foldericon
 function sfi(){
     sed -i -e "1i$1" ./.folderinfo
@@ -242,4 +247,4 @@ source "$HOME/.cargo/env"
 source /usr/share/autojump/autojump.sh
 # source "$HOME/.completion_bash/alacritty"
 
-export PATH=$PATH:$HOME/.dotnet/tools
+# export PATH=$PATH:$HOME/.dotnet/tools

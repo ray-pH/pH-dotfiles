@@ -36,6 +36,9 @@ tnoremap <Esc> <C-\><C-n>
 map <Space> <Leader>
 " map ; :
 
+  " Find and Replace
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+  
   " Tab indenting
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
