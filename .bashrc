@@ -248,3 +248,7 @@ source /usr/share/autojump/autojump.sh
 # source "$HOME/.completion_bash/alacritty"
 
 # export PATH=$PATH:$HOME/.dotnet/tools
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/ray/.sdkman"
+[[ -s "/home/ray/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ray/.sdkman/bin/sdkman-init.sh"

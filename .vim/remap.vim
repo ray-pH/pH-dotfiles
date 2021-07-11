@@ -29,7 +29,7 @@ vnoremap <Leader>p "+p
 
 " Miscs
 nnoremap <C-k> :Commentary<CR>
-nnoremap <C-j> o<Esc>
+" nnoremap <C-j> o<Esc>
 nnoremap <Leader>n :set invrelativenumber<CR>
 nnoremap <Leader>r :R<CR>
 tnoremap <Esc> <C-\><C-n>

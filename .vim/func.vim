@@ -47,9 +47,30 @@ function Runscript()
     endif
 endfunction
 
+function CompileScript()
+    :w
+    if &ft=='cpp'
+	:!g++ % -o %:t:r
+    endif
+endfunction
+
+function RunFloatTerm()
+    :w
+    if &ft=='cpp'
+	:!g++ % -o %:t:r
+        :FloatermNew!./%:t:r
+    elseif &ft=='haskell'
+	:FloatermNew!runhaskell %
+    endif
+endfunction
+
 command Pdf :! okular %:t:r.pdf >/dev/null 2>&1 &
 command Run :call Runscript() 
+command Compile :call CompileScript()
+command RunInTerm :call RunFloatTerm()
 command R :Run
+command RR :RunInTerm
+command CC :Compile
 
 " common misstype
 command Q :q
