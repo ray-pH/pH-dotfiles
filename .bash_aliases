@@ -20,14 +20,10 @@ alias vimv='vimv -v'
 alias sl='ls'
 
 # Program Abbrev
-alias marktext='~/AppImage/marktext-x86_64.AppImage'
 alias mcc='java -jar ~/App/TLauncher/TLauncher-2.72.jar'
-alias pde='~/App/processing-3.5.4/processing-java'
 alias pdfshrink='~/Documents/shell/shrinkpdf.sh"$@"'
 alias fpc='~/.fpc-3.2.0/lib/fpc/3.2.0/ppcx64'
-alias godot='~/App/Godot/Godot_v3.2.3-stable_x11.64'
 alias pdftotext2='~/App/xpdf-tools-linux-4.03/bin64/pdftotext'
-alias proton='/home/ray/.steam/debian-installation/steamapps/common/Proton\ 5.0/proton'
 
 # Config File Edit
 alias vv='nvim ~/.vim/init.vim'
