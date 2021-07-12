@@ -44,12 +44,6 @@ colorscheme iceberg
 " let g:monochrome_italic_comments = 1
 " colorscheme monochrome
 
-" quickscope
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-highlight QuickScopePrimary guifg='#eF5F70' gui=underline ctermfg=81 cterm=underline
-highlight QuickScopeSecondary guifg='#eF5F70' gui=underline ctermfg=81 cterm=underline
-let g:qs_max_chars=150
-
 " save folding
 " augroup remember_folds
 "     autocmd!
