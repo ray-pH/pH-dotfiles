@@ -38,7 +38,7 @@ map <Space> <Leader>
 
   " Find and Replace
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-vnoremap <C-R> :s/\%V\%V//gc<Left><Left><Left><Left><Left><Left>
+" vnoremap <C-R> :s/\%V\%V//gc<Left><Left><Left><Left><Left><Left>
   
   " Tab indenting
 vnoremap <Tab> >gv

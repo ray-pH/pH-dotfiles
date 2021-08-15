@@ -72,14 +72,20 @@ alias dfsda='df -BM /dev/sda{1,2,3,4,5,6}'
 alias cstuff='cd /media/ray/STUFF'
 alias cdata='cd /media/ray/DATA'
 
+# Check Systems
+alias checkmodel='sudo dmidecode -s system-product-name'
+alias checkmem='sudo dmidecode -t memory'
+alias listmem='sudo lshw -short -C memory'
+
 # Git
+alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gitlog1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gitlog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 alias sshgit="ssh-add ~/.ssh/github"
 alias gitssh="ssh-add ~/.ssh/github"
 alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias gitpu="git push -u origin main"
-alias gpu="git push -u origin main"
+alias cfgupdate="cfg add -u"
+alias gp="git push"
 
 # Obscura
 alias sus="cat ~/Documents/shell/sus"

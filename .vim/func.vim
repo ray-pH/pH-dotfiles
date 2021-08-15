@@ -44,6 +44,8 @@ function Runscript()
         :!~/App/processing-3.5.4/processing-java --sketch=%:p:h --run
     elseif &ft=='lisp'
         :!clisp %
+    elseif &ft=='kotlin'
+        :!kotlinc % -include-runtime -d %:t:r.jar && java -jar ./%:t:r.jar
     endif
 endfunction
 

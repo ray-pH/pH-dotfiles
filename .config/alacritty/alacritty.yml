@@ -10,7 +10,11 @@ window:
 font:
     normal:
         family: Hack
+        # style: Normal
+        # family: Fantasque Sans Mono
+        # family: Ubuntu Mono
         style: Normal
+    # size: 13.0
     size: 11.0
     offset:
         x: 0

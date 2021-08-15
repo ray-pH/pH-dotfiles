@@ -34,6 +34,7 @@ Plugin 'mboughaba/i3config.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'sophacles/vim-processing'
+Plugin 'udalov/kotlin-vim'
 
 " colorscheme
 Plugin 'arcticicestudio/nord-vim'
