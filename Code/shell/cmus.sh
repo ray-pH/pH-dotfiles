@@ -6,7 +6,5 @@
 # Distributed under terms of the MIT license.
 #
 
-# konsole --noclose -i -e "echo $'\033]30;cmus\007' && cmus"
-# konsole -e bash -c "echo $'\033]30;cmus\007' && cmus" &
-# konsole -name cmus -e cmus &
+# use --class cmus so that i3 can configure workspace using [instance="cmus"]
 alacritty --class cmus -o font.offset.y=0 -e cmus &
