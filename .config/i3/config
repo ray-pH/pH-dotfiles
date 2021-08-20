@@ -286,7 +286,7 @@ bindsym XF86MonBrightnessUp exec sudo brightnessctl set 10+
 bindsym Print exec flameshot gui
 bindsym Shift+Print exec kcolorchooser
 bindsym $mod+KP_Subtract exec ksysguard
-bindsym $mod+equal exec $HOME/Code/Bash/rofi-calc.sh
+bindsym $mod+equal exec $HOME/Code/shell/rofi-calc.sh
 
 # App Floating
 for_window [class="Nm-connection-editor"] floating enable

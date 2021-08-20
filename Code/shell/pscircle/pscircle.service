@@ -1,0 +1,11 @@
+# normally /etc/systemd/user
+
+[Unit]
+Description=Runs pscircle to continuously update desktop wallpaper 
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/bin/bash -c "mkdir /tmp/pscircle; while true; do pscircle --output=/tmp/pscircle/1.png --background-color=0f1322 --root-pid=1 --dot-color-min=46a4d8 --dot-color-max=900 --tree-font-color=eee --toplists-font-color=eee --toplists-pid-font-color=777 --toplists-bar-background=999 --toplists-bar-color=fff --max-children=53 --tree-sector-angle=4.1415 --tree-rotate=true --tree-rotation-angle=2.0708 --tree-center=-1580:0 --cpulist-center=300:0 --memlist-center=800:0; %h/.local/bin/ksetwallpaper.py /tmp/pscircle/1.png; sleep 3; pscircle --output=/tmp/pscircle/2.png --background-color=0f1322 --root-pid=1 --dot-color-min=46a4d8 --dot-color-max=900 --tree-font-color=eee --toplists-font-color=eee --toplists-pid-font-color=777 --toplists-bar-background=999 --toplists-bar-color=fff --max-children=53 --tree-sector-angle=4.1415 --tree-rotate=true --tree-rotation-angle=2.0708 --tree-center=-1580:0 --cpulist-center=300:0 --memlist-center=800:0; %h/.local/bin/ksetwallpaper.py /tmp/pscircle/2.png; sleep 3; done"
+
+[Install]
+WantedBy=default.target

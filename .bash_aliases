@@ -73,9 +73,9 @@ alias cstuff='cd /media/ray/STUFF'
 alias cdata='cd /media/ray/DATA'
 
 # Check Systems
-alias checkmodel='sudo dmidecode -s system-product-name'
-alias checkmem='sudo dmidecode -t memory'
-alias listmem='sudo lshw -short -C memory'
+alias modelcheck='sudo dmidecode -t 1'
+alias memcheck='sudo dmidecode -t memory'
+alias memlist='sudo lshw -short -C memory'
 
 # Git
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
