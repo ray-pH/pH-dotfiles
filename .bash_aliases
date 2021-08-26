@@ -68,7 +68,8 @@ alias uug='sudo apt upgrade'
 # alias appsize="dpkg-query -W -f=\"${Installed\-Size;8}  ${Package}\n\" | sort -n"
 
 # Files
-alias dfsda='df -BM /dev/sda{1,2,3,4,5,6}'
+# alias dfsda='df -BM /dev/sda{1,2,3,4,5,6}'
+alias dfsda='df -BM /dev/sda{5,2,1,3,4,6,9}'
 alias cstuff='cd /media/ray/STUFF'
 alias cdata='cd /media/ray/DATA'
 
