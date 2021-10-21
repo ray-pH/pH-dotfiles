@@ -46,6 +46,8 @@ function Runscript()
         :!clisp %
     elseif &ft=='kotlin'
         :!kotlinc % -include-runtime -d %:t:r.jar && java -jar ./%:t:r.jar
+    elseif &ft=='octave'
+        :!octave --persist %
     endif
 endfunction
 
@@ -63,6 +65,8 @@ function RunFloatTerm()
         :FloatermNew!./%:t:r
     elseif &ft=='haskell'
 	:FloatermNew!runhaskell %
+    elseif &ft=='octave'
+        :FloatermNew!octave --persist %
     endif
 endfunction
 

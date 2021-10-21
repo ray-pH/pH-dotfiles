@@ -24,6 +24,7 @@ Plugin 'voldikss/vim-floaterm'
 Plugin 'metakirby5/codi.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'preservim/nerdtree'
 
 " languages
 Plugin 'vim-python/python-syntax'

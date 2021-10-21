@@ -230,6 +230,19 @@ codi() {
     Codi $syntax" "$@"
 }
 
+# lf color
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
 export UGM=/media/ray/DATA/Data/UGM/
 # Custom Prompt
 source $HOME/.bash_prompt
@@ -252,3 +265,19 @@ source /usr/share/autojump/autojump.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ray/.sdkman"
 [[ -s "/home/ray/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ray/.sdkman/bin/sdkman-init.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/ray/Code/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/ray/Code/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/ray/Code/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/ray/Code/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+

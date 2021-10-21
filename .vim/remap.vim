@@ -30,7 +30,8 @@ vnoremap <Leader>p "+p
 " Miscs
 nnoremap <C-k> :Commentary<CR>
 " nnoremap <C-j> o<Esc>
-nnoremap <Leader>n :set invrelativenumber<CR>
+" nnoremap <Leader>n :set invrelativenumber<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>r :R<CR>
 tnoremap <Esc> <C-\><C-n>
 map <Space> <Leader>

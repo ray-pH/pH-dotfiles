@@ -132,17 +132,13 @@ mode "move" {
 }
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-# set $ws1 "1:  マイン"
 set $ws1 "1:  Main"
 set $ws2 "2:  Internet"
-# set $ws2 "2:  インターネット"
 set $ws3 "3:  File"
-# set $ws3 "3:  ファイル"
-set $ws4 "4:  Game"
-# set $ws4 "4:  ゲーム"
+# set $ws4 "4:  Game"
+set $ws4 "4:  Work"
 set $ws5 "5"
 set $ws6 "6:  Music"
-# set $ws6 "6:  ミュジック"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -294,6 +290,7 @@ for_window [class="Latexey"] floating enable
 for_window [class="ksysguard"] floating enable
 for_window [class="Escent"] floating enable
 for_window [class="brave-browser"] border pixel 2
+for_window [instance="ncpamixer"] floating enable
 
 # App Workspace
 assign [instance="cmus"] $ws6
@@ -305,7 +302,7 @@ assign [class="Quodlibet"] $ws6
 
 # Startup Neccessity
 exec --no-startup-id picom --experimental-backends --backend glx
-exec --no-startup-id parcellite
+# exec --no-startup-id parcellite
 exec --no-startup-id dunst
 # exec_always --no-startup-id $HOME/Documents/shell/randwallpaper.sh
 # exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/rainforest.jpg

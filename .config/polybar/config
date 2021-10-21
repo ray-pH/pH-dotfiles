@@ -316,7 +316,9 @@ format-volume = <label-volume> <bar-volume>
 label-volume = VOL%percentage:3%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+click-right = pavucontrol
+
+label-muted = muted
 label-muted-foreground = #666
 
 bar-volume-width = 5
@@ -341,6 +343,7 @@ bar-volume-fill-font = 5
 bar-volume-empty = ─
 bar-volume-empty-font = 5
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
 
 [module/alsa]
 type = internal/alsa

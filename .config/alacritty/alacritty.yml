@@ -70,6 +70,9 @@ colors:
         magenta: '#614a73'
         cyan:    '#186c60'
         white:   '#63686d'
+    # cursor:
+        # text:   '#ffffff'
+        # cursor: '#1d99f3'
 
 
 

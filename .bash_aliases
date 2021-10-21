@@ -15,6 +15,7 @@ alias ca='bat --paging=never'
 alias ba='bat --paging=never'
 alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
 alias vimv='vimv -v'
+alias vidir='vidir -verbose'
 
 # Typos
 alias sl='ls'
@@ -51,6 +52,7 @@ alias setwallp='feh --bg-fill'
 alias autoclick='xdotool click --delay 500 --repeat 1000 1'
 #     v4l2-ctl --list-devices
 alias webcprep='sudo modprobe v4l2loopback video_nr=10 card_label="OBS Video Source" exclusive_caps=1'
+alias sshpi='ssh -p 3022 pi@localhost'
 
 # Ping
 alias P='~/Documents/shell/prettyping.sh --nolegend 8.8.8.8'
@@ -72,6 +74,8 @@ alias uug='sudo apt upgrade'
 alias dfsda='df -BM /dev/sda{5,2,1,3,4,6,9}'
 alias cstuff='cd /media/ray/STUFF'
 alias cdata='cd /media/ray/DATA'
+# alias cugm='cd /media/ray/DATA/Data/UGM/'
+alias cugm='cd ~/Data/UGM'
 
 # Check Systems
 alias modelcheck='sudo dmidecode -t 1'
