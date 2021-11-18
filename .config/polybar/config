@@ -505,6 +505,7 @@ label-maxlen = 40
 type = custom/script
 tail = true
 exec = ~/.config/polybar/cava.sh
+; exec = ~/.config/polybar/cava-verticalgradient.sh
 format = <label>
 format-font = 5
 label = %output%

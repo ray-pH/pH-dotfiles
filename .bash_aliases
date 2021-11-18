@@ -5,6 +5,7 @@ alias rg='ranger'
 alias jn='jupyter-notebook'
 alias vim='nvim'
 alias v='nvim'
+alias nv='neovide'
 alias nn='nnn'
 alias vtex='nvim *.tex'
 alias lsv='ls -v'
@@ -16,6 +17,7 @@ alias ba='bat --paging=never'
 alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
 alias vimv='vimv -v'
 alias vidir='vidir -verbose'
+alias python-http='python -m http.server'
 
 # Typos
 alias sl='ls'
@@ -25,6 +27,7 @@ alias mcc='java -jar ~/App/TLauncher/TLauncher-2.72.jar'
 alias pdfshrink='~/Documents/shell/shrinkpdf.sh"$@"'
 alias fpc='~/.fpc-3.2.0/lib/fpc/3.2.0/ppcx64'
 alias pdftotext2='~/App/xpdf-tools-linux-4.03/bin64/pdftotext'
+alias ffmpeg-pb='ffpb'
 
 # Config File Edit
 alias vv='nvim ~/.vim/init.vim'
@@ -53,6 +56,8 @@ alias autoclick='xdotool click --delay 500 --repeat 1000 1'
 #     v4l2-ctl --list-devices
 alias webcprep='sudo modprobe v4l2loopback video_nr=10 card_label="OBS Video Source" exclusive_caps=1'
 alias sshpi='ssh -p 3022 pi@localhost'
+alias picom-restart='picom --experimental-backends --backend glx &'
+alias xclip-png='xclip -selection clipboard -t image/png -o'
 
 # Ping
 alias P='~/Documents/shell/prettyping.sh --nolegend 8.8.8.8'
@@ -91,6 +96,9 @@ alias gitssh="ssh-add ~/.ssh/github"
 alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias cfgupdate="cfg add -u"
 alias gp="git push"
+
+# Environment
+alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
 
 # Obscura
 alias sus="cat ~/Documents/shell/sus"

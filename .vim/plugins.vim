@@ -25,6 +25,7 @@ Plugin 'metakirby5/codi.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'preservim/nerdtree'
+Plugin 'terryma/vim-multiple-cursors'
 
 " languages
 Plugin 'vim-python/python-syntax'

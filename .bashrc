@@ -281,3 +281,4 @@ export SDKMAN_DIR="/home/ray/.sdkman"
 # unset __conda_setup
 # <<< conda initialize <<<
 
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"

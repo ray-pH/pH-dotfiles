@@ -24,6 +24,7 @@ set t_Co=256 			" set 256 color
 set termguicolors		" use real color
 set splitright 			" split right
 set splitbelow 			" split below
+set guifont=Fira\ Code:h11      " GUI font
 
 " lightline
 let g:lightline = { 'colorscheme': 'tokyonight' }

@@ -49,6 +49,7 @@ nnoremap <C-a> ggVG
   " Line movement
 nnoremap H 10h
 nnoremap L 10l
+nnoremap <C-j> J
 nnoremap J 10j 
 nnoremap K 10k
 vnoremap J :move '>+1<CR>gv-gv

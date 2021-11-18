@@ -310,6 +310,7 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/sorai.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id sudo $HOME/Documents/shell/manualmount.sh
 exec --no-startup-id $HOME/Documents/shell/touchpad_config.sh
+exec --no-startup-id i3-battery-popup -n -s ~/Code/shell/i3-battery-popup/i3-battery-popup.wav -L 20 -l 10 -t 1m
 # exec --no-startup-id $HOME/Code/Latexey/linux_Latexey/Latexey
 exec --no-startup-id alttab -d 1
 
