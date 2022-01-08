@@ -48,6 +48,10 @@ function Runscript()
         :!kotlinc % -include-runtime -d %:t:r.jar && java -jar ./%:t:r.jar
     elseif &ft=='octave'
         :!octave --persist %
+    elseif &ft=='asm'
+        :!  nasm -f elf64 % && ld -s -o %:t:r %:t:r.o && ./%:t:r
+    elseif &ft=='prolog'
+        :!swipl -l %
     endif
 endfunction
 
@@ -67,6 +71,8 @@ function RunFloatTerm()
 	:FloatermNew!runhaskell %
     elseif &ft=='octave'
         :FloatermNew!octave --persist %
+    elseif &ft=='prolog'
+        :FloatermNew!swipl -l %
     endif
 endfunction
 

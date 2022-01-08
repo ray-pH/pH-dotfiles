@@ -44,6 +44,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
   " Tab indenting
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+nnoremap <A-a> <C-a>
+vnoremap <A-a> <C-a>
 nnoremap <C-a> ggVG
 
   " Line movement

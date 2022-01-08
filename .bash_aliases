@@ -17,7 +17,12 @@ alias ba='bat --paging=never'
 alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
 alias vimv='vimv -v'
 alias vidir='vidir -verbose'
+alias vdd='vidir -verbose '
+# alias vdd='ls -1 | vidir - -verbose '
+alias vd='edir'
 alias python-http='python -m http.server'
+alias dg='dragon -x *'
+alias diff-color='icdiff'
 
 # Typos
 alias sl='ls'
@@ -81,6 +86,7 @@ alias cstuff='cd /media/ray/STUFF'
 alias cdata='cd /media/ray/DATA'
 # alias cugm='cd /media/ray/DATA/Data/UGM/'
 alias cugm='cd ~/Data/UGM'
+alias cwin='cd /media/ray/ADDITION/VM/Win10/sharedFolder/'
 
 # Check Systems
 alias modelcheck='sudo dmidecode -t 1'
@@ -100,5 +106,10 @@ alias gp="git push"
 # Environment
 alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
 
+# Themeing
+alias QT-notheme='export QT_QPA_PLATFORMTHEME='
+
 # Obscura
 alias sus="cat ~/Documents/shell/sus"
+alias owo="echo uwu"
+alias uwu="echo owo"

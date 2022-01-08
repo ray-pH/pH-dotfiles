@@ -11,7 +11,7 @@ source $HOME/.config/nvim/syntax.vim
 set number			" show number
 set showmatch			" highlight matching bracket
 set cursorline			" highlight line where cursor is
-set relativenumber		" relative line number
+" set relativenumber		" relative line number
 set noshowmode			" not showing --insert-- etc. in bottom left
 set showtabline=2		" always show tab
 set shiftwidth=4		" tab is 4 space wice

@@ -37,6 +37,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'sophacles/vim-processing'
 Plugin 'udalov/kotlin-vim'
+Plugin 'gridley/serpent2vimsyntax'
 
 " colorscheme
 Plugin 'arcticicestudio/nord-vim'

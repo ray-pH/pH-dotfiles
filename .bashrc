@@ -282,3 +282,7 @@ export SDKMAN_DIR="/home/ray/.sdkman"
 # <<< conda initialize <<<
 
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
+
+# Serpent
+export SERPENT_DATA="/xs"
+export SERPENT_ACELIB="sss_jeff311u.xsdata"

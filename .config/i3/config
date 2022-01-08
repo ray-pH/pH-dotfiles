@@ -289,6 +289,7 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Latexey"] floating enable
 for_window [class="ksysguard"] floating enable
 for_window [class="Escent"] floating enable
+for_window [class="quantumQ"] floating enable
 for_window [class="brave-browser"] border pixel 2
 for_window [instance="ncpamixer"] floating enable
 
