@@ -23,6 +23,8 @@ alias vd='edir'
 alias python-http='python -m http.server'
 alias dg='dragon -x *'
 alias diff-color='icdiff'
+alias sx='sxiv *.jpg *.png *.jpeg'
+alias font-list='fc-list'
 
 # Typos
 alias sl='ls'
