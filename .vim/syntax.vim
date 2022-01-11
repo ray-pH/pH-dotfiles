@@ -20,6 +20,7 @@ autocmd Filetype asm set commentstring=;%s
 augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
     au! BufRead,BufNewFile *.pro set filetype=prolog
+    au! BufRead,BufNewFile *.edir set filetype=edir
 augroup END
 if has("autocmd") && exists("+omnifunc")
     autocmd Filetype octave
