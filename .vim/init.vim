@@ -64,5 +64,9 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" TableMode
+let g:table_mode_corner='|'
+let g:table_mode_tableize_map = '<Leader>tz'
+
 " au FileType tex iab aln \begin{align*}<CR>\end{align*}<Up><Esc><S-A>
 " au FileType tex iab br( \left(\right)<Left><Left>

@@ -16,12 +16,13 @@ autocmd Filetype pascal set commentstring={\ %s}
 autocmd Filetype octave set commentstring=%%s
 autocmd Filetype asm set commentstring=;%s
 
-" Octave Language
 augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
     au! BufRead,BufNewFile *.pro set filetype=prolog
     au! BufRead,BufNewFile *.edir set filetype=edir
 augroup END
+
+" Octave Language
 if has("autocmd") && exists("+omnifunc")
     autocmd Filetype octave
     \ if &omnifunc == "" |

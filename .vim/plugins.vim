@@ -26,6 +26,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'preservim/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'dhruvasagar/vim-table-mode'
 
 " languages
 Plugin 'vim-python/python-syntax'
