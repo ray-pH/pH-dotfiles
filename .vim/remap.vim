@@ -24,8 +24,10 @@ nnoremap <Leader>o :Ranger<CR>
 nnoremap <Leader>O :RangerNewTab<CR> 
 
 " Clipboard
+nnoremap <Leader>y "+y
 vnoremap <Leader>y "+y
-vnoremap <Leader>p "+p
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
 
 " Miscs
 nnoremap <C-k> :Commentary<CR>

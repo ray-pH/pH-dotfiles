@@ -1,0 +1,44 @@
+snippet aln "Align"
+\begin{align*}
+    $1
+\end{align*}
+endsnippet
+
+snippet beg "begin and end"
+\begin{$1}
+\end{$1}
+endsnippet
+
+snippet bend "begin and end"
+\begin{$1}
+\end{$1}
+endsnippet
+
+snippet newbr "new command for bracker"
+\DeclarePairedDelimiter\autobracket{(}{)}
+\newcommand{\br}[1]{\autobracket*{#1}}
+endsnippet
+
+snippet fig "figure"
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{$1}
+    \caption{$2}
+\end{figure}
+endsnippet
+
+snippet part "partial differential"
+\frac{\partial}{\partial $1}
+endsnippet
+
+snippet br( "normal bracket"
+\left($1\right
+endsnippet
+
+snippet br[ "normal bracket"
+\left[$1\right
+endsnippet
+
+snippet br{ "normal bracket"
+\left\{$1\right\
+endsnippet

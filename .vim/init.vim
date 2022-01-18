@@ -19,7 +19,7 @@ set expandtab
 set mouse=nv			" use mouse in normal and visual mode
 set iskeyword+=-		" treat - sep word as a single word
 set formatoptions-=cro		" stop newline comment continuation
-set clipboard=unnamedplus 	" use system clipboard
+" set clipboard=unnamedplus 	" use system clipboard
 set t_Co=256 			" set 256 color
 set termguicolors		" use real color
 set splitright 			" split right
