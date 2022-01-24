@@ -6,6 +6,8 @@ window:
     padding:
         x: 15
         y: 15
+    opacity: 0.85
+
 
 font:
     normal:
@@ -73,8 +75,4 @@ colors:
     # cursor:
         # text:   '#ffffff'
         # cursor: '#1d99f3'
-
-
-
-background_opacity: 0.85
 
