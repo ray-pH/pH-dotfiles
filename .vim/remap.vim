@@ -65,4 +65,5 @@ au FileType tex nnoremap k gk
 au FileType tex vnoremap j gj
 au FileType tex vnoremap k gk
 
-
+" FZF
+nnoremap <Leader>f :Files<CR>
