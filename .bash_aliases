@@ -74,6 +74,8 @@ alias pii='speedometer -r wlp1s0'
 # nmcli
 alias ncp='nmcli con up pH'
 alias ncv='nmcli con up VELIMO'
+alias nct='nmcli con up "Thorium Room"'
+
 
 # Update and Packages
 alias uu='sudo apt update'
