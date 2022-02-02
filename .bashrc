@@ -260,6 +260,14 @@ source "$HOME/.cargo/env"
 source /usr/share/autojump/autojump.sh
 # source "$HOME/.completion_bash/alacritty"
 
+# Tab autocomplete binding
+# \e is escape sequence
+bind 'TAB:menu-complete'
+bind '"\e[Z": menu-complete-backward'
+bind "set show-all-if-ambiguous on"
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ray/.sdkman"
 [[ -s "/home/ray/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ray/.sdkman/bin/sdkman-init.sh"
