@@ -260,26 +260,9 @@ source "$HOME/.cargo/env"
 source /usr/share/autojump/autojump.sh
 # source "$HOME/.completion_bash/alacritty"
 
-# export PATH=$PATH:$HOME/.dotnet/tools
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ray/.sdkman"
 [[ -s "/home/ray/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ray/.sdkman/bin/sdkman-init.sh"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/ray/Code/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/ray/Code/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/ray/Code/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/ray/Code/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
 
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 

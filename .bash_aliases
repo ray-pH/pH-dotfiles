@@ -25,6 +25,7 @@ alias dg='dragon -x *'
 alias diff-color='icdiff'
 alias sx='sxiv *.jpg *.png *.jpeg'
 alias font-list='fc-list'
+alias speedtest='speedtest --bytes'
 
 # Typos
 alias sl='ls'
