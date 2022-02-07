@@ -264,6 +264,7 @@ source /usr/share/autojump/autojump.sh
 # \e is escape sequence
 bind 'TAB:menu-complete'
 bind '"\e[Z": menu-complete-backward'
+bind "set menu-complete-display-prefix on"
 bind "set show-all-if-ambiguous on"
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'

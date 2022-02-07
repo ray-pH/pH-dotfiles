@@ -26,6 +26,7 @@ alias diff-color='icdiff'
 alias sx='sxiv *.jpg *.png *.jpeg'
 alias font-list='fc-list'
 alias speedtest='speedtest --bytes'
+alias bmon="bmon -p 'wlp*'"
 
 # Typos
 alias sl='ls'
