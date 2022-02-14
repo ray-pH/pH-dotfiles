@@ -11,32 +11,33 @@ alias vtex='nvim *.tex'
 alias lsv='ls -v'
 alias qq='exit'
 alias :q='exit'
-alias jadwal='sxiv ~/Pictures/jadwal.png'
 alias ca='bat --paging=never'
 alias ba='bat --paging=never'
-alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
 alias vimv='vimv -v'
 alias vidir='vidir -verbose'
 alias vdd='vidir -verbose '
-# alias vdd='ls -1 | vidir - -verbose '
+alias vsd='/usr/bin/vd'
 alias vd='edir --suffix .edir'
-alias python-http='python -m http.server'
 alias dg='dragon -x *'
-alias diff-color='icdiff'
 alias sx='sxiv *.jpg *.png *.jpeg'
-alias font-list='fc-list'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 
 # Typos
 alias sl='ls'
 
-# Program Abbrev
+# Program Rename
 alias mcc='java -jar ~/App/TLauncher/TLauncher-2.72.jar'
 alias pdfshrink='~/Documents/shell/shrinkpdf.sh"$@"'
 alias fpc='~/.fpc-3.2.0/lib/fpc/3.2.0/ppcx64'
 alias pdftotext2='~/App/xpdf-tools-linux-4.03/bin64/pdftotext'
 alias ffmpeg-pb='ffpb'
+alias audio-setting='pavucontrol'
+alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
+alias jadwal='sxiv ~/Pictures/jadwal.png'
+alias python-http='python -m http.server'
+alias font-list='fc-list'
+alias diff-color='icdiff'
 
 # Config File Edit
 alias vv='nvim ~/.vim/init.vim'
