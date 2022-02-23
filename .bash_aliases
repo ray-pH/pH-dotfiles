@@ -68,6 +68,7 @@ alias webcprep='sudo modprobe v4l2loopback video_nr=10 card_label="OBS Video Sou
 alias sshpi='ssh -p 3022 pi@localhost'
 alias picom-restart='picom --experimental-backends --backend glx &'
 alias xclip-png='xclip -selection clipboard -t image/png -o'
+alias mvd="ls -c ~/Downloads | fzf | sed 's/^/\/home\/ray\/Downloads\//' | xargs mv --target-directory=."
 
 # Ping
 alias P='~/Documents/shell/prettyping.sh --nolegend 8.8.8.8'
@@ -78,6 +79,7 @@ alias pii='speedometer -r wlp1s0'
 alias ncp='nmcli con up pH'
 alias ncv='nmcli con up VELIMO'
 alias nct='nmcli con up "Thorium Room"'
+alias ncu='nmcli con up UGM-Hotspot'
 
 
 # Update and Packages
