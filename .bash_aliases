@@ -22,6 +22,7 @@ alias dg='dragon -x *'
 alias sx='sxiv *.jpg *.png *.jpeg'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
+alias ros-source="source /opt/ros/noetic/setup.bash"
 
 # Typos
 alias sl='ls'
@@ -64,11 +65,11 @@ alias powersleep='systemctl suspend'
 alias setwallp='feh --bg-fill'
 alias autoclick='xdotool click --delay 500 --repeat 1000 1'
 #     v4l2-ctl --list-devices
-alias webcprep='sudo modprobe v4l2loopback video_nr=10 card_label="OBS Video Source" exclusive_caps=1'
+alias obs-webcprep='sudo modprobe v4l2loopback video_nr=10 card_label="OBS Video Source" exclusive_caps=1'
 alias sshpi='ssh -p 3022 pi@localhost'
 alias picom-restart='picom --experimental-backends --backend glx &'
 alias xclip-png='xclip -selection clipboard -t image/png -o'
-alias mvd="ls -c ~/Downloads | fzf | sed 's/^/\/home\/ray\/Downloads\//' | xargs mv --target-directory=."
+alias mvd="ls -c ~/Downloads | fzf | sed 's/^/\"\/home\/ray\/Downloads\//;s/$/\"/' | xargs mv --target-directory=."
 
 # Ping
 alias P='~/Documents/shell/prettyping.sh --nolegend 8.8.8.8'

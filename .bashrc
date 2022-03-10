@@ -180,20 +180,20 @@ export SCM_CHECK=true
 # Load Bash It
 # source "$BASH_IT"/bash_it.sh
 
-# function ranger {
-    # local IFS=$'\t\n'
-    # local tempfile="$(mktemp -t tmp.XXXXXX)"
-    # local ranger_cmd=(
-        # command
-        # ranger
-        # --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    # )
-    # ${ranger_cmd[@]} "$@"
-    # if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        # cd -- "$(cat "$tempfile")" || return
-    # fi
-    # command rm -f -- "$tempfile" 2>/dev/null
-# }
+function ranger {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
+}
 
 # Default to Nvim
 export VISUAL=nvim
@@ -260,6 +260,17 @@ source "$HOME/.cargo/env"
 source /usr/share/autojump/autojump.sh
 # source "$HOME/.completion_bash/alacritty"
 
+# fun with cd
+function cs(){
+    cd "$(ls -d */ | fzf)" && ls
+}
+
+function csh(){
+    # cd "$((ls -d .*/; ls -d */) | fzf)"
+    cd "$(ls -d .*/| fzf)"
+}
+
+
 # Tab autocomplete binding
 # \e is escape sequence
 bind 'TAB:menu-complete'
@@ -278,3 +289,6 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 # Serpent
 export SERPENT_DATA="/xs"
 export SERPENT_ACELIB="sss_jeff311u.xsdata"
+
+# temp ROS
+# source /home/ray/Code/ROS/tutorial/noetic_workspace/catkin_ws/devel/setup.bash
