@@ -292,3 +292,8 @@ export SERPENT_ACELIB="sss_jeff311u.xsdata"
 
 # temp ROS
 # source /home/ray/Code/ROS/tutorial/noetic_workspace/catkin_ws/devel/setup.bash
+
+# carla thing
+export CARLA_ROOT=/media/ray/DATA/CARLA/CARLA_0.9.11
+export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.11-py3.7-linux-x86_64.egg:$CARLA_ROOT/PythonAPI/carla:$CARLA_ROOT/PythonAPI/
+source /home/ray/autoF/carla-ros-bridge/catkin_ws/devel/setup.bash

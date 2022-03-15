@@ -28,6 +28,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'preservim/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'junegunn/goyo.vim'
 
 " languages
 Plugin 'vim-python/python-syntax'
