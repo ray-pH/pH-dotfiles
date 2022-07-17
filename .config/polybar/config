@@ -71,7 +71,8 @@ font-5 = Noto Sans:size=10:antialias=true;0				# Main
 ; modules-right = cmus kdeconnect battery wlan eth date
 
 modules-left = i3
-modules-center = cmus cava
+; modules-center = cmus chromium youtubem cava
+modules-center = cmus chromium cava
 modules-right = backlight pulseaudio kdeconnect memory cpu battery wlan eth date
 
 ; modules-center = mpdl
@@ -311,12 +312,13 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+; type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL%percentage:3%%
 label-volume-foreground = ${root.foreground}
 
-click-right = pavucontrol
+click-right = exec pavucontrol &
 
 label-muted = muted
 label-muted-foreground = #666
@@ -347,6 +349,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
 type = internal/alsa
+; type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
@@ -500,6 +503,55 @@ format-underline = ${colors.light}
 ; format-underline = ${colors.blue}
 label = %output%
 label-maxlen = 40
+
+[module/youtubem]
+type = custom/script
+
+exec = ~/.config/polybar/polybar-youtubem.sh
+exec-if = pgrep -x youtube-music
+interval = 1
+
+click-left = playerctl --player=youtube-music next
+click-right = playerctl --player=youtube-music prev
+click-middle = playerctl --player=youtube-music play-pause
+; scroll-up = cmus-remote --volume +5%
+; scroll-down = cmus-remote --volume -5%
+
+label-font = 
+format = <label>
+format-prefix = "< "
+format-suffix = " >"
+; format-underline = ${colors.foreground-alt}
+format-underline = ${colors.light}
+; format-background = ${colors.blue}
+; format-underline = ${colors.blue}
+label = %output%
+label-maxlen = 20
+
+[module/chromium]
+type = custom/script
+
+exec = ~/.config/polybar/polybar-chromium.sh
+; exec-if = pgrep -x youtube-music
+exec-if = playerctl -l | grep .
+interval = 1
+
+click-left = playerctl next
+click-right = playerctl prev
+click-middle = playerctl play-pause
+; scroll-up = cmus-remote --volume +5%
+; scroll-down = cmus-remote --volume -5%
+
+label-font = 
+format = <label>
+format-prefix = "< "
+format-suffix = " >"
+; format-underline = ${colors.foreground-alt}
+format-underline = ${colors.light}
+; format-background = ${colors.blue}
+; format-underline = ${colors.blue}
+label = %output%
+label-maxlen = 30
 
 [module/cava]
 type = custom/script

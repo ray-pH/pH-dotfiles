@@ -47,7 +47,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 nnoremap <A-a> <C-a>
+nnoremap <A-x> <C-x>
 vnoremap <A-a> <C-a>
+vnoremap <A-x> <C-x>
 nnoremap <C-a> ggVG
 
   " Line movement

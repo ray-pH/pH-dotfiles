@@ -17,7 +17,7 @@ set showtabline=2		" always show tab
 set shiftwidth=4		" tab is 4 space wice
 set expandtab
 set mouse=nv			" use mouse in normal and visual mode
-set iskeyword+=-		" treat - sep word as a single word
+" set iskeyword+=-		" treat - sep word as a single word
 set formatoptions-=cro		" stop newline comment continuation
 " set clipboard=unnamedplus 	" use system clipboard
 set t_Co=256 			" set 256 color
@@ -25,6 +25,7 @@ set termguicolors		" use real color
 set splitright 			" split right
 set splitbelow 			" split below
 set guifont=Fira\ Code:h11      " GUI font
+" set foldmethod=marker
 
 " lightline
 let g:lightline = { 'colorscheme': 'tokyonight' }

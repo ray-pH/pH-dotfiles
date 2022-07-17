@@ -52,6 +52,8 @@ function Runscript()
         :!  nasm -f elf64 % && ld -s -o %:t:r %:t:r.o && ./%:t:r
     elseif &ft=='prolog'
         :!swipl -l %
+    elseif &ft=='glsl'
+        :!esshader -s %
     endif
 endfunction
 
@@ -73,6 +75,8 @@ function RunFloatTerm()
         :FloatermNew!octave --persist %
     elseif &ft=='prolog'
         :FloatermNew!swipl -l %
+    elseif &ft=='python'
+        :FloatermNew!python3 % 
     endif
 endfunction
 

@@ -96,6 +96,7 @@ alias cstuff='cd /media/ray/STUFF'
 alias cdata='cd /media/ray/DATA'
 # alias cugm='cd /media/ray/DATA/Data/UGM/'
 alias cugm='cd ~/Data/UGM'
+alias cmicro='cd /media/ray/DATA/Data/UGM/Semester6/Mikroreaktor/'
 alias cwin='cd /media/ray/ADDITION/VM/Win10/sharedFolder/'
 
 # Check Systems

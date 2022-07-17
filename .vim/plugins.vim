@@ -43,6 +43,7 @@ Plugin 'udalov/kotlin-vim'
 Plugin 'gridley/serpent2vimsyntax'
 Plugin 'calviken/vim-gdscript3'
 Plugin 'lervag/vim-foam'
+Plugin 'tikhomirov/vim-glsl'
 
 " colorscheme
 Plugin 'arcticicestudio/nord-vim'

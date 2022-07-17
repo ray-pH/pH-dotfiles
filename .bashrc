@@ -16,8 +16,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
+HISTIGNORE="ls:ps:history:j *"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -289,6 +290,9 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 # Serpent
 export SERPENT_DATA="/xs"
 export SERPENT_ACELIB="sss_jeff311u.xsdata"
+
+# nim
+export PATH=/home/ray/.nimble/bin:$PATH
 
 # temp ROS
 # source /home/ray/Code/ROS/tutorial/noetic_workspace/catkin_ws/devel/setup.bash
