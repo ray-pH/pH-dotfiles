@@ -44,6 +44,9 @@ Plugin 'gridley/serpent2vimsyntax'
 Plugin 'calviken/vim-gdscript3'
 Plugin 'lervag/vim-foam'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'evanleck/vim-svelte', {'branch': 'main'}
 
 " colorscheme
 Plugin 'arcticicestudio/nord-vim'

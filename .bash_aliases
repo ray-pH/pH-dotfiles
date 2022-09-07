@@ -68,6 +68,7 @@ alias autoclick='xdotool click --delay 500 --repeat 1000 1'
 alias obs-webcprep='sudo modprobe v4l2loopback video_nr=10 card_label="OBS Video Source" exclusive_caps=1'
 alias sshpi='ssh -p 3022 pi@localhost'
 alias picom-restart='picom --experimental-backends --backend glx &'
+alias compositor-restart='picom --experimental-backends --backend glx &'
 alias xclip-png='xclip -selection clipboard -t image/png -o'
 alias mvd="ls -c ~/Downloads | fzf | sed 's/^/\"\/home\/ray\/Downloads\//;s/$/\"/' | xargs mv --target-directory=."
 

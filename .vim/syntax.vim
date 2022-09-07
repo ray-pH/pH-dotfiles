@@ -15,6 +15,7 @@ let g:cpp_posix_standard = 1
 autocmd Filetype pascal set commentstring={\ %s}
 autocmd Filetype octave set commentstring=%%s
 autocmd Filetype asm set commentstring=;%s
+autocmd Filetype svelte set commentstring=<!--%s-->
 
 augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
