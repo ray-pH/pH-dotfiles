@@ -29,6 +29,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'junegunn/goyo.vim'
+Plugin 'deris/vim-shot-f'
 
 " languages
 Plugin 'vim-python/python-syntax'

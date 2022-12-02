@@ -21,6 +21,7 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
     au! BufRead,BufNewFile *.pro set filetype=prolog
     au! BufRead,BufNewFile *.edir set filetype=edir
+    au! BufRead,BufNewFile *.mjs set filetype=mathjs
 augroup END
 
 " Octave Language

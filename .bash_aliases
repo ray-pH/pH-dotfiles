@@ -117,6 +117,9 @@ alias gp="git push"
 
 # Environment
 alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
+# alias wine32='WINEPREFIX=/home/ray/.local/share/wineprefixes/Win32 wine'
+alias wine32='WINEPREFIX=/media/ray/ADDITION/wineprefixes/Win32 wine'
+
 
 # Themeing
 alias QT-notheme='export QT_QPA_PLATFORMTHEME='

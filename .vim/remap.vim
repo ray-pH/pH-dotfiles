@@ -28,6 +28,7 @@ nnoremap <Leader>y "+y
 vnoremap <Leader>y "+y
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
+noremap x "_x
 
 " Miscs
 nnoremap <C-k> :Commentary<CR>

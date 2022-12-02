@@ -19,6 +19,8 @@ function Runscript()
 	:!pdflatex %
     elseif &ft=='javascript'
         :!node %
+    elseif &ft=='mathjs'
+        :!mathjs %
     elseif &ft=='php'
         :!php %
     elseif &ft=='sh'
@@ -87,6 +89,8 @@ command RunInTerm :call RunFloatTerm()
 command R :Run
 command RR :RunInTerm
 command CC :Compile
+
+cabbrev r <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'R' : 'r')<CR>
 
 " common misstype
 command Q :q
