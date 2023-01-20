@@ -88,7 +88,7 @@ command Compile :call CompileScript()
 command RunInTerm :call RunFloatTerm()
 command R :Run
 command RR :RunInTerm
-command CC :Compile
+command C :Compile
 
 cabbrev r <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'R' : 'r')<CR>
 

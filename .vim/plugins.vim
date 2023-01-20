@@ -11,12 +11,13 @@ Plugin 'tpope/vim-fugitive'
 " custom plugin
 Plugin 'tpope/vim-commentary'
 Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'lilydjwg/colorizer'
+" Plugin 'lilydjwg/colorizer'
+Plugin 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plugin 'itchyny/lightline.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'neoclide/coc.nvim'
-Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-surround'
@@ -48,6 +49,7 @@ Plugin 'tikhomirov/vim-glsl'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'evanleck/vim-svelte', {'branch': 'main'}
+Plugin 'leafOfTree/vim-matchtag'
 
 " colorscheme
 Plugin 'arcticicestudio/nord-vim'

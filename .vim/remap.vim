@@ -4,6 +4,9 @@ vnoremap E $
 nnoremap B ^
 vnoremap B ^
 
+" Close
+nnoremap <C-d> :q<CR>
+
 " Windows and Tabs
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h

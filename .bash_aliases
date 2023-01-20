@@ -23,6 +23,7 @@ alias sx='sxiv *.jpg *.png *.jpeg'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
+alias cp="rsync -ah --progress"
 
 # Typos
 alias sl='ls'
@@ -37,6 +38,7 @@ alias audio-setting='pavucontrol'
 alias webc='mpv /dev/video0 --profile=low-latency --untimed --vf=hflip'
 alias jadwal='sxiv ~/Pictures/jadwal.png'
 alias python-http='python -m http.server'
+alias py-http='python -m http.server'
 alias font-list='fc-list'
 alias diff-color='icdiff'
 
@@ -71,6 +73,7 @@ alias picom-restart='picom --experimental-backends --backend glx &'
 alias compositor-restart='picom --experimental-backends --backend glx &'
 alias xclip-png='xclip -selection clipboard -t image/png -o'
 alias mvd="ls -c ~/Downloads | fzf | sed 's/^/\"\/home\/ray\/Downloads\//;s/$/\"/' | xargs mv --target-directory=."
+alias gittoken-clip='xclip -sel c < ~/Documents/shell/gittoken'
 
 # Ping
 alias P='~/Documents/shell/prettyping.sh --nolegend 8.8.8.8'
@@ -94,6 +97,7 @@ alias uug='sudo apt upgrade'
 # alias dfsda='df -BM /dev/sda{1,2,3,4,5,6}'
 alias dfsda='df -BM /dev/sda{5,2,1,3,4,6,9}'
 alias cstuff='cd /media/ray/STUFF'
+alias cadd='cd /media/ray/ADDITION'
 alias cdata='cd /media/ray/DATA'
 # alias cugm='cd /media/ray/DATA/Data/UGM/'
 alias cugm='cd ~/Data/UGM'

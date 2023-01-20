@@ -26,6 +26,8 @@ set splitright 			" split right
 set splitbelow 			" split below
 set guifont=Fira\ Code:h11      " GUI font
 " set foldmethod=marker
+" set re=1
+set title                       " dynamic title
 
 " lightline
 let g:lightline = { 'colorscheme': 'tokyonight' }
@@ -83,6 +85,10 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " TableMode
 let g:table_mode_corner='|'
 let g:table_mode_tableize_map = '<Leader>tz'
+
+"hexokinase
+let g:Hexokinase_highlighters = ['backgroundfull']
+" let g:Hexokinase_highlighters = ['virtual']
 
 " au FileType tex iab aln \begin{align*}<CR>\end{align*}<Up><Esc><S-A>
 " au FileType tex iab br( \left(\right)<Left><Left>

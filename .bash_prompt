@@ -9,6 +9,7 @@ CWHITE="15"
 CBLACK="0"
 CBLUE="32"
 CDARKBLUE="25"
+CYELLOW="178"
 
 # ColorName
 BGDIR=$CGREY
@@ -32,6 +33,7 @@ TRTRIANGLE=""
 
 # Git Colors
 CGITCLEAN=$CBLUE
+CGITDIRTY=$CYELLOW
 
 function git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
@@ -46,9 +48,18 @@ function gitprompt(){
 	NEXT_COLOR=$BGFOLDER
     fi
 
-    GIT_PROMPT="\e[0;$FG;$CWHITE;$BG;${CGITCLEAN}m ${BRANCH} \
+    if [ -z "$(git status --untracked-files=no --porcelain)" ]; then 
+        # clean
+        GIT_PROMPT="\e[0;$FG;$CWHITE;$BG;${CGITCLEAN}m ${BRANCH} \
 ${GIT_BRANCH} \
 \e[0;$FG;$CGITCLEAN;$BG;${NEXT_COLOR}m${RARROW}\e[0m"
+    else
+        # dirty
+        GIT_PROMPT="\e[0;$FG;$CWHITE;$BG;${CGITCLEAN}m ${BRANCH} \
+${GIT_BRANCH} \
+\e[0;$FG;$CGITCLEAN;$BG;${CGITDIRTY}m${RARROW} \e[0m\
+\e[0;$FG;$CGITDIRTY;$BG;${NEXT_COLOR}m${RARROW}\e[0m"
+    fi
 
     echo "${GIT_PROMPT}"
 }
