@@ -28,6 +28,7 @@ set guifont=Fira\ Code:h11      " GUI font
 " set foldmethod=marker
 " set re=1
 set title                       " dynamic title
+set autowrite                   " save before make
 
 " lightline
 let g:lightline = { 'colorscheme': 'tokyonight' }

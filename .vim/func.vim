@@ -1,3 +1,32 @@
+" Makeprg
+au filetype python setlocal mp=python3\ %
+au filetype cpp setlocal mp=g++\ %\ -o\ %:t:r\ &&\ ./%:t:r
+au filetype pascal setlocal mp=fpc\ %\ &&\ ./%:t:r
+au filetype cpp setlocal mp=g++\ %\ -o\ %:t:r\ &&\ ./%:t:r
+au filetype c setlocal mp=gcc\ %\ -o\ %:t:r\ &&\ ./%:t:r
+au filetype haskell setlocal mp=runhaskell\ %
+au filetype rust setlocal mp=rustc\ %\ &&\ ./%:t:r
+au filetype tex setlocal mp=pdflatex\ %
+au filetype javascript setlocal mp=node\ %
+au filetype mathjs setlocal mp=mathjs\ %
+au filetype php setlocal mp=php\ %
+au filetype sh setlocal mp=bash\ %
+au filetype j setlocal mp=ijconsole\ %
+au filetype r setlocal mp=Rscript\ %
+au filetype ruby setlocal mp=ruby\ %
+au filetype perl setlocal mp=perl\ %
+au filetype java setlocal mp=javac\ %\ &&\ java\ %:t:r
+au filetype go setlocal mp=go\ run\ %
+au filetype julia setlocal mp=julia\ %
+au filetype lua setlocal mp=lua\ %
+au filetype processing setlocal mp=~/App/processing-3.5.4/processing-java\ --sketch=%:p:h\ --run
+au filetype lisp setlocal mp=clisp\ %
+au filetype kotlin setlocal mp=kotlinc\ %\ -include-runtime\ -d\ %:t:r.jar\ &&\ java\ -jar\ ./%:t:r.jar
+au filetype octave setlocal mp=octave\ --persist\ %
+au filetype asm setlocal mp=\ \ nasm\ -f\ elf64\ %\ &&\ ld\ -s\ -o\ %:t:r\ %:t:r.o\ &&\ ./%:t:r
+au filetype prolog setlocal mp=swipl\ -l\ %
+au filetype glsl setlocal mp=esshader\ -s\ %
+
 " Runscript
 "
 function Runscript()
@@ -86,7 +115,8 @@ command Pdf :! okular %:t:r.pdf >/dev/null 2>&1 &
 command Run :call Runscript() 
 command Compile :call CompileScript()
 command RunInTerm :call RunFloatTerm()
-command R :Run
+" command R :Run
+command R :make
 command RR :RunInTerm
 command C :Compile
 
