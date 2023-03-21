@@ -91,6 +91,7 @@ alias ncu='nmcli con up UGM-Hotspot'
 alias uu='sudo apt update'
 alias uul='sudo apt list --upgradable'
 alias uug='sudo apt upgrade'
+alias uud='sudo apt upgrade --download-only'
 # alias appsize="dpkg-query -W -f=\"${Installed\-Size;8}  ${Package}\n\" | sort -n"
 
 # Files
