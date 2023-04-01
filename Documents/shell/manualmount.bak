@@ -1,0 +1,10 @@
+#! /bin/sh
+
+mkdir -p /media/ray/STUFF
+mount /dev/sda6 /media/ray/STUFF
+mkdir -p /media/ray/DATA
+mount /dev/sda4 /media/ray/DATA
+mkdir -p /media/ray/WINDOWS
+mount /dev/sda3 /media/ray/WINDOWS
+mkdir -p /media/ray/ADDITION
+mount /dev/sda9 /media/ray/ADDITION

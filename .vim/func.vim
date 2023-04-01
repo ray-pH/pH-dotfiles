@@ -126,3 +126,27 @@ cabbrev r <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'R' : 'r')<CR>
 command Q :q
 command X :x
 command W :w
+
+" COC
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Use <leader>k to show documentation in preview window
+nnoremap <leader>k :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('<leader>k', 'in')
+  endif
+endfunction
+
+" Mappings for CoCList
+" Show all diagnostics
+nnoremap <silent><nowait> <leader>dg  :<C-u>CocList diagnostics<cr>
+
+" Remap for rename current word
+ nmap <leader>rn <Plug>(coc-rename)

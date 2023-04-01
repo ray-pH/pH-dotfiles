@@ -1,9 +1,9 @@
 " Remapping
 source $HOME/.config/nvim/remap.vim
-" Custom function and command
-source $HOME/.config/nvim/func.vim
 " Vundle
 source $HOME/.config/nvim/plugins.vim
+" Custom function and command
+source $HOME/.config/nvim/func.vim
 " Syntax highlighter
 source $HOME/.config/nvim/syntax.vim
 
