@@ -68,8 +68,9 @@ function prompt() {
     
     inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
+    [[ "$VIRTUAL_ENV" != "" ]] && VENV=" ${VIRTUAL_ENV##*/}"
     PROMPT_L="\e[0;$FG;${FGDIR};$BG;${BGDIR}m \w \
-\e[0;$FG;${BGDIR}m${RARROW}\e[0m"
+\e[0;$FG;${BGDIR}m${RARROW}\e[0m${VENV}"
 
     PROMPT_R="\e[0;$FG;${BGTIME}m${LARROW}\
 \e[0;$FG;${FGTIME};$BG;${BGTIME}m \T \

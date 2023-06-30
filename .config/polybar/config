@@ -73,7 +73,9 @@ font-5 = Noto Sans:size=10:antialias=true;0				# Main
 modules-left = i3
 ; modules-center = cmus chromium youtubem cava
 modules-center = cmus chromium cava
+; modules-center = cmus cava
 modules-right = backlight pulseaudio kdeconnect memory cpu battery wlan eth date
+; modules-right = backlight pulseaudio memory cpu battery wlan eth date
 
 ; modules-center = mpdl
 ; modules-right = backlight pulseaudio kdeconnect memory cpu battery wlan eth temperature date

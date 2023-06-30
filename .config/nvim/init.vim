@@ -93,3 +93,6 @@ let g:Hexokinase_highlighters = ['backgroundfull']
 
 " au FileType tex iab aln \begin{align*}<CR>\end{align*}<Up><Esc><S-A>
 " au FileType tex iab br( \left(\right)<Left><Left>
+"
+" context
+let g:context_add_mappings = 0

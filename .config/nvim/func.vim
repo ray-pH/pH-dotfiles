@@ -5,9 +5,12 @@ au filetype pascal setlocal mp=fpc\ %\ &&\ ./%:t:r
 au filetype cpp setlocal mp=g++\ %\ -o\ %:t:r\ &&\ ./%:t:r
 au filetype c setlocal mp=gcc\ %\ -o\ %:t:r\ &&\ ./%:t:r
 au filetype haskell setlocal mp=runhaskell\ %
-au filetype rust setlocal mp=rustc\ %\ &&\ ./%:t:r
+" au filetype rust setlocal mp=rustc\ %\ &&\ ./%:t:r
+au filetype rust setlocal mp=cargo\ run
 au filetype tex setlocal mp=pdflatex\ %
 au filetype javascript setlocal mp=node\ %
+" au filetype typescript setlocal mp=ts-node\ %
+au filetype typescript setlocal mp=deno\ run\ %
 au filetype mathjs setlocal mp=mathjs\ %
 au filetype php setlocal mp=php\ %
 au filetype sh setlocal mp=bash\ %
@@ -135,6 +138,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Use <leader>k to show documentation in preview window
 nnoremap <leader>k :call ShowDocumentation()<CR>
+
+nmap <silent> gd <Plug>(coc-definition)
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')

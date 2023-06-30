@@ -1,10 +1,12 @@
 #! /bin/sh
 
 mkdir -p /media/ray/STUFF
-mount /dev/sda6 /media/ray/STUFF
+mount /dev/sda6 /media/ray/STUFF -o lazytime,big_writes
 mkdir -p /media/ray/DATA
-mount /dev/sda4 /media/ray/DATA
+mount /dev/sda4 /media/ray/DATA -o lazytime,big_writes
 mkdir -p /media/ray/WINDOWS
-mount /dev/sda3 /media/ray/WINDOWS
+mount /dev/sda3 /media/ray/WINDOWS -o lazytime,big_writes
 mkdir -p /media/ray/ADDITION
 mount /dev/sda9 /media/ray/ADDITION
+mkdir -p /media/ray/UBUNTU
+mount /dev/sda5 /media/ray/UBUNTU

@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export PATH=/home/ray/.local/bin:/sbin:/usr/sbin$PATH
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -89,18 +91,15 @@ fi
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -115,86 +114,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-[ -r /home/ray/.byobu/prompt ] && . /home/ray/.byobu/prompt   #byobu-prompt#
+. "$HOME/.cargo/env"
 
-
-# If not running interactively, don't do anything
-case $- in
-  *i*) ;;
-    *) return;;
-esac
-
-# Path to the bash it configuration
-# export BASH_IT="/home/ray/.bash-it"
-
-# Lock and Load a custom theme file.
-# Leave empty to disable theming.
-# location /.bash_it/themes/
-# export BASH_IT_THEME='powerline-multiline'
-    #export BASH_IT_THEME='powerline-naked'
-    #export BASH_IT_THEME='modern'
-
-# (Advanced): Change this to the name of your remote repo if you
-# cloned bash-it with a remote other than origin such as `bash-it`.
-# export BASH_IT_REMOTE='bash-it'
-
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
-
-# Don't check mail when opening terminal.
-unset MAILCHECK
-
-# Change this to your console based IRC client of choice.
-export IRC_CLIENT='irssi'
-
-# Set this to the command you use for todo.txt-cli
-export TODO="t"
-
-# Set this to false to turn off version control status checking within the prompt for all themes
-export SCM_CHECK=true
-
-# Set Xterm/screen/Tmux title with only a short hostname.
-# Uncomment this (or set SHORT_HOSTNAME to something else),
-# Will otherwise fall back on $HOSTNAME.
-#export SHORT_HOSTNAME=$(hostname -s)
-
-# Set Xterm/screen/Tmux title with only a short username.
-# Uncomment this (or set SHORT_USER to something else),
-# Will otherwise fall back on $USER.
-#export SHORT_USER=${USER:0:8}
-
-# Set Xterm/screen/Tmux title with shortened command and directory.
-# Uncomment this to set.
-#export SHORT_TERM_LINE=true
-
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/djl/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
-
-# (Advanced): Uncomment this to make Bash-it reload itself automatically
-# after enabling or disabling aliases, plugins, and completions.
-# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
-
-# Uncomment this to make Bash-it create alias reload.
-# export BASH_IT_RELOAD_LEGACY=1
-
-# Load Bash It
-# source "$BASH_IT"/bash_it.sh
-
-function ranger {
-    local IFS=$'\t\n'
-    local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    )
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
-    fi
-    command rm -f -- "$tempfile" 2>/dev/null
-}
 
 # Default to Nvim
 export VISUAL=nvim
@@ -203,50 +124,16 @@ export EDITOR=nvim
 # Keybind
 bind '"":alias-expand-line'
 
-# Fuzzy completion
-# source $HOME/Documents/shell/fuzzy_bash_completion
-# fuzzy_setup_for_command cd
-# fuzzy_setup_for_command cp
-# fuzzy_setup_for_command mv
-# fuzzy_setup_for_command v
-# fuzzy_setup_for_command vim
-# fuzzy_setup_for_command nvim
-
 # Media folder color
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 # Python
 export PYTHONSTARTUP=~/.pystart
 
-# codi
-codi() {
-  local syntax="${1:-python}"
-  shift
-  vim -c \
-    "let g:startify_disable_at_vimenter = 1 |\
-    set bt=nofile ls=0 noru nonu nornu |\
-    hi ColorColumn ctermbg=NONE |\
-    hi VertSplit ctermbg=NONE |\
-    hi NonText ctermfg=0 |\
-    Codi $syntax" "$@"
-}
 
-# lf color
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-export UGM=/media/ray/DATA/Data/UGM/
 # Custom Prompt
 source $HOME/.bash_prompt
+
 
 # Copy file path
 function yy(){
@@ -257,13 +144,11 @@ function yy(){
 function sfi(){
     sed -i -e "1i$1" ./.folderinfo
 }
-source "$HOME/.cargo/env"
-source /usr/share/autojump/autojump.sh
-# source "$HOME/.completion_bash/alacritty"
+
 
 # fun with cd
 function cs(){
-    cd "$(ls -d */ | fzf)" && ls
+    cd "$(ls -d */ .. | fzf)" && ls
 }
 
 function csh(){
@@ -271,6 +156,9 @@ function csh(){
     cd "$(ls -d .*/| fzf)"
 }
 
+# deno
+export DENO_INSTALL="/home/ray/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Tab autocomplete binding
 # \e is escape sequence
@@ -281,27 +169,6 @@ bind "set show-all-if-ambiguous on"
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/ray/.sdkman"
-[[ -s "/home/ray/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ray/.sdkman/bin/sdkman-init.sh"
 
-export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
-
-# Serpent
-export SERPENT_DATA="/xs"
-export SERPENT_ACELIB="sss_jeff311u.xsdata"
-
-# nim
-export PATH=/home/ray/.nimble/bin:$PATH
-
-# temp ROS
-# source /home/ray/Code/ROS/tutorial/noetic_workspace/catkin_ws/devel/setup.bash
-
-# carla thing
-# export CARLA_ROOT=/media/ray/DATA/CARLA/CARLA_0.9.11
-# export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.11-py3.7-linux-x86_64.egg:$CARLA_ROOT/PythonAPI/carla:$CARLA_ROOT/PythonAPI/
-# source /home/ray/autoF/carla-ros-bridge/catkin_ws/devel/setup.bash
-
-# Install Ruby Gems to ~/Code/gems
-export GEM_HOME="$HOME/Code/gems"
-export PATH="$HOME/Code/gems/bin:$PATH"
+# autojump
+[[ -s /home/ray/.autojump/etc/profile.d/autojump.sh ]] && source /home/ray/.autojump/etc/profile.d/autojump.sh
