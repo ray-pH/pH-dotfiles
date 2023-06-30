@@ -1,0 +1,6 @@
+XTerm*font:             -*-fixed-medium-r-*-*-13-*-*-*-*-60-iso10646-1
+XTerm*boldFont:         -*-fixed-medium-r-*-*-13-*-*-*-*-60-iso10646-1
+
+Sxiv.background: #000000
+Sxiv.foreground: #EEEEEE
+Sxiv.font: Hack-9
