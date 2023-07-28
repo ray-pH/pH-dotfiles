@@ -55,15 +55,19 @@ border-color = #00000000
 padding-left = 0
 padding-right = 2
 ;
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 1
 ;
-font-0 = fixed:pixelsize=12;1
+; font-0 = Agave:pixelsize=10;1;
+font-0 = Px AmstradPC1512-2y:pixelsize=5.1;1;
+; font-0 = Px ATI 9x16:pixelsize=10;1;
+; font-0 = Px PhoenixEGA 9x14:pixelsize=10;1;
+; font-0 = Px TandyNew 225-2y:pixelsize=8;1;
 font-1 = siji:pixelsize=10;1
 font-2 = FontAwesome:pixelsize=10;1
 font-3 = Noto Sans CJK JP:size=8:style=bold:antialias=true;0
 font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-5 = Noto Sans:size=10:antialias=true;0				# Main
+font-5 = Noto Sans:size=12:antialias=true;0				# Main
 ;
 
 ; modules-left = backlight pulseaudio memory cpu
