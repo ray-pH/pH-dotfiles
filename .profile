@@ -31,5 +31,13 @@ fi
 . "$HOME/.cargo/env"
 
 # Kvantum Override
-export QT_STYLE_OVERRIDE=kvantum
+export QT_STYLE_OVERRIDE=kvantum-dark
+# export QT_QPA_PLATFORMTHEME=kvantum
 export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+# Wayland
+# export SDL_VIDEODRIVER=wayland
+# export _JAVA_AWT_WM_NONREPARENTING=1
+# export QT_QPA_PLATFORM=wayland
+# export XDG_CURRENT_DESKTOP=sway
+# export XDG_SESSION_DESKTOP=sway
