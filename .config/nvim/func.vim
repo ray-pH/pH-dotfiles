@@ -130,6 +130,10 @@ command Q :q
 command X :x
 command W :w
 
+" Copilot
+imap <silent><script><expr> <C-m> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " COC
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list

@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 
 " custom plugin
+Plugin 'github/copilot.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'michaeljsmith/vim-indent-object'
 " Plugin 'lilydjwg/colorizer'
@@ -64,6 +65,7 @@ Plugin 'ghifarit53/tokyonight-vim'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'patstockwell/vim-monokai-tasty'
 Plugin 'fxn/vim-monochrome'
+Plugin 'projekt0n/github-nvim-theme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
