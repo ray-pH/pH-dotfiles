@@ -22,9 +22,6 @@ nnoremap <Left> :vertical resize +5<CR>
 
 " File
 nnoremap gf <C-w>gf
-nnoremap <C-o> :Ranger<CR>
-nnoremap <Leader>o :Ranger<CR> 
-nnoremap <Leader>O :RangerNewTab<CR> 
 
 " Clipboard
 nnoremap <Leader>y "+y
