@@ -2,6 +2,7 @@
 alias python='python3'
 alias py='python'
 alias rg='ranger'
+alias jo='joshuto'
 alias jn='jupyter-notebook'
 alias vim='nvim'
 alias v='nvim'
