@@ -53,6 +53,8 @@ Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'evanleck/vim-svelte', {'branch': 'main'}
 Plugin 'leafOfTree/vim-matchtag'
+Plugin 'jpalardy/vim-slime'
+Plugin 'hanschen/vim-ipython-cell'
 
 " colorscheme
 Plugin 'arcticicestudio/nord-vim'

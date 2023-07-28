@@ -159,3 +159,22 @@ nnoremap <silent><nowait> <leader>dg  :<C-u>CocList diagnostics<cr>
 
 " Remap for rename current word
  nmap <leader>rn <Plug>(coc-rename)
+
+
+
+" IPython
+function! IPythonOpen()
+    " open a new terminal in vertical split and run IPython
+    vnew|call termopen('ipython3 --matplotlib')
+    file ipython " name the new buffer
+
+    " set slime target to new terminal
+    if !exists('g:slime_default_config')
+        let g:slime_default_config = {}
+    end
+    let g:slime_default_config['jobid'] = b:terminal_job_id
+
+    wincmd p " switch to the previous buffer
+endfunction
+nnoremap <leader>ip :call IPythonOpen()<CR>
+nnoremap <Leader>c :IPythonCellExecuteCell<CR>

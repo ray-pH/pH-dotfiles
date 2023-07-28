@@ -96,3 +96,7 @@ let g:Hexokinase_highlighters = ['backgroundfull']
 "
 " context
 let g:context_add_mappings = 0
+
+let g:slime_target = 'neovim'
+let g:slime_dont_ask_default = 1
+
