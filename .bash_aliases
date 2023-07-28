@@ -48,6 +48,7 @@ alias vb='nvim ~/.bashrc'
 alias vba='nvim ~/.bash_aliases'
 alias vbp='nvim ~/.bash_prompt'
 alias vi3='nvim ~/.config/i3/config'
+alias vsway='nvim ~/.config/sway/config'
 alias vcom='nvim ~/.config/picom.conf'
 alias vpoly='nvim ~/.config/polybar/config'
 alias vala='nvim ~/.config/alacritty/alacritty.yml'
@@ -124,6 +125,10 @@ alias gp="git push"
 alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
 # alias wine32='WINEPREFIX=/home/ray/.local/share/wineprefixes/Win32 wine'
 alias wine32='WINEPREFIX=/media/ray/ADDITION/wineprefixes/Win32 wine'
+
+#sleep
+alias nosleep='xset s off -dpms'
+alias nosleep-reset='xset s on +dpms'
 
 
 # Themeing
