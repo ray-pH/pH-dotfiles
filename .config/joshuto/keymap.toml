@@ -54,6 +54,8 @@ keymap = [
   { keys = ["k"], command = "cursor_move_up" },
   { keys = ["h"], command = "cd .." },
   { keys = ["l"], command = "open" },
+  { keys = ["J"], command = "cursor_move_page_down 0.5" },
+  { keys = ["K"], command = "cursor_move_page_up 0.5" },
   { keys = ["g", "g"], command = "cursor_move_home" },
   { keys = ["G"], command = "cursor_move_end" },
   { keys = ["r"], command = "open_with" },
