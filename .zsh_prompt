@@ -1,0 +1,118 @@
+# vim: ft=sh
+
+# Colors
+CGREY="240"
+CDARKGREY="232"
+CWHITE="15"
+CBLACK="0"
+CBLUE="32"
+CDARKBLUE="25"
+CYELLOW="178"
+
+# ColorName
+BGDIR=$CGREY
+BGTIME=$CGREY
+BGUSER=$CBLUE
+BGFOLDER=$CWHITE
+
+FGDIR=$CWHITE
+FGTIME=$CWHITE
+FGUSER=$CWHITE
+FGFOLDER=$CGREY
+
+# Icons
+RARROW=""
+LARROW=""
+ARROW="❯"
+BRANCH=""
+RGAP=""
+LDTRIANGLE=""
+TRTRIANGLE=""
+
+# Git Colors
+CGITCLEAN=$CBLUE
+CGITDIRTY=$CYELLOW
+
+function git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+function gitprompt(){
+    # GIT_RAW_STATUS="$(git status --porcelain)"
+    GIT_BRANCH="$(git_branch)"
+    # GIT_STATUS="${GIT_RAW_STATUS%% *}"
+    NEXT_COLOR=$BGDIR
+    if [ -f ./.folderinfo ]; then
+	NEXT_COLOR=$BGFOLDER
+    fi
+
+    if [ -z "$(git status --untracked-files=no --porcelain)" ]; then 
+        # clean
+        GIT_PROMPT="%F{$CWHITE}%K{$CGITCLEAN} ${BRANCH} \
+${GIT_BRANCH} \
+%F{$CGITCLEAN}%K{$NEXT_COLOR}${RARROW}%F{reset}%K{reset}"
+    else
+        # dirty
+        GIT_PROMPT="%F{$CWHITE}%K{$CGITCLEAN} ${BRANCH} \
+${GIT_BRANCH} \
+%F{$CGITCLEAN}%K{$CGITDIRTY}${RARROW} %F{reset}%K{reset}\
+%F{$CGITDIRTY}%K{$NEXT_COLOR}${RARROW}%F{reset}%K{reset}"
+    fi
+
+    echo "$GIT_PROMPT"
+}
+
+function myprompt() {
+    
+    inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+    SUBS_PWD="${PWD/#$HOME/\~}"
+
+    [[ "$VIRTUAL_ENV" != "" ]] && VENV=" ${VIRTUAL_ENV##*/}"
+    PROMPT_L="%F{$FGDIR}%K{$BGDIR} $SUBS_PWD \
+%F{$BGDIR}%K{reset}${RARROW}%F{reset}%K{reset}${VENV}"
+
+    PROMPT_R="%F{$BGTIME}${LARROW}\
+%F{$FGTIME}%K{$BGTIME} %* \
+%F{$BGUSER}%K{$BGTIME}${LARROW}\
+%F{$FGUSER}%K{$BGUSER} %n %F{reset}%K{reset}"
+
+    # show folder icon
+    # if [ -f ./.folderinfo ]; then
+	# FOLDER_ICON="$(head -n  1 .folderinfo)"
+	# PROMPT_L="\e[0;$FG;${FGFOLDER};$BG;${BGFOLDER}m ${FOLDER_ICON} \
+# \e[0;$FG;${BGFOLDER};$BG;${BGDIR}m${RARROW}\e[0m\
+# ${PROMPT_L}"
+    # fi
+
+    # show git branch
+    if [ "$inside_git_repo" ]; then
+	PROMPT_L="$(gitprompt)${PROMPT_L}"
+    fi
+}
+
+function prompt-length() {
+  emulate -L zsh
+  local COLUMNS=${2:-$COLUMNS}
+  local -i x y=${#1} m
+  if (( y )); then
+    while (( ${${(%):-$1%$y(l.1.0)}[-1]} )); do
+      x=y
+      (( y *= 2 ))
+    done
+    while (( y > x + 1 )); do
+      (( m = x + (y - x) / 2 ))
+      (( ${${(%):-$1%$m(l.x.y)}[-1]} = m ))
+    done
+  fi
+  echo $x
+}
+
+precmd() {
+    myprompt;
+    LEFT="$PROMPT_L"
+    RIGHT="$PROMPT_R"
+    LEFTLEN=$(prompt-length {$LEFT})
+    LEN=$((${COLUMNS}-${LEFTLEN}+59))
+    print -P $LEFT${(pl:$LEN:: :)RIGHT}
+}
+PROMPT="$ARROW "
