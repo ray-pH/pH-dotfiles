@@ -1,5 +1,3 @@
-# vim: ft=sh
-
 # Colors
 FG="38;5"
 BG="48;5"
@@ -64,7 +62,7 @@ ${GIT_BRANCH} \
     echo "${GIT_PROMPT}"
 }
 
-function prompt() {
+function myprompt() {
     
     inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
@@ -94,4 +92,4 @@ ${PROMPT_L}"
     PS1=$(printf "%*s\r%s\n$ARROW " "$(($(tput cols)+${compensate}))" "$PROMPT_R" "$PROMPT_L")
 }
 
-PROMPT_COMMAND=prompt
+export PROMPT_COMMAND=myprompt
