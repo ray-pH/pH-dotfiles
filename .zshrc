@@ -72,6 +72,15 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Tab autocomplete binding
+# \e is escape sequence
+bindkey '\eOA' history-beginning-search-backward
+bindkey '\eOB' history-beginning-search-forward
+
+# word traversal
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # autojump
 [[ -s /home/ray/.autojump/etc/profile.d/autojump.sh ]] && source /home/ray/.autojump/etc/profile.d/autojump.sh
 
@@ -86,11 +95,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH=/home/ray/.local/bin:/sbin:/usr/sbin$PATH
 #cargo
 . "$HOME/.cargo/env"
-
-# Tab autocomplete binding
-# \e is escape sequence
-bindkey '\eOA' history-beginning-search-backward
-bindkey '\eOB' history-beginning-search-forward
 
 # functions
 function yy(){
