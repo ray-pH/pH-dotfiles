@@ -1,3 +1,4 @@
+
 # Set up the prompt
 
 autoload -Uz promptinit
@@ -71,3 +72,52 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# autojump
+[[ -s /home/ray/.autojump/etc/profile.d/autojump.sh ]] && source /home/ray/.autojump/etc/profile.d/autojump.sh
+
+
+# PATH
+#dotnet
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+# deno
+export DENO_INSTALL="/home/ray/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH=/home/ray/.local/bin:/sbin:/usr/sbin$PATH
+#cargo
+. "$HOME/.cargo/env"
+
+# Tab autocomplete binding
+# \e is escape sequence
+bindkey '\eOA' history-beginning-search-backward
+bindkey '\eOB' history-beginning-search-forward
+
+# functions
+function yy(){
+    readlink -fn "$1" | xclip -selection c
+}
+#joshuto
+function joshuto() {
+    ID="$$"
+    mkdir -p /tmp/$USER
+    OUTPUT_FILE="/tmp/$USER/joshuto-cwd-$ID"
+    env joshuto --output-file "$OUTPUT_FILE" $@
+    exit_code=$?
+
+    case "$exit_code" in
+        # regular exit
+        0)
+            ;;
+        # output contains current directory
+        101)
+            JOSHUTO_CWD=$(cat "$OUTPUT_FILE")
+            cd "$JOSHUTO_CWD"
+            ;;
+        # output selected files
+        102)
+            ;;
+        *)
+            echo "Exit code: $exit_code"
+            ;;
+    esac
+}
