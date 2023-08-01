@@ -65,7 +65,7 @@ ${GIT_BRANCH} \
 function myprompt() {
     
     inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
-    SUBS_PWD="${PWD/#$HOME/\~}"
+    SUBS_PWD="${PWD/#$HOME/~}"
 
     [[ "$VIRTUAL_ENV" != "" ]] && VENV=" ${VIRTUAL_ENV##*/}"
     PROMPT_L="%F{$FGDIR}%K{$BGDIR} $SUBS_PWD \
@@ -112,7 +112,7 @@ precmd() {
     LEFT="$PROMPT_L"
     RIGHT="$PROMPT_R"
     LEFTLEN=$(prompt-length {$LEFT})
-    LEN=$((${COLUMNS}-${LEFTLEN}+59))
-    print -P $LEFT${(pl:$LEN:: :)RIGHT}
+    LEN=$((${COLUMNS}-${LEFTLEN}+58))
+    TOP=$LEFT${(pl:$LEN:: :)RIGHT}
+    PROMPT="$TOP$ARROW "
 }
-PROMPT="$ARROW "
