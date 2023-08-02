@@ -10,6 +10,9 @@ promptinit
 
 . ~/.zsh_prompt
 setopt histignorealldups sharehistory
+command_not_found_handler() {
+    command-not-found $@
+}
 
 # Use emacs keybindings even if our EDITOR is set to vi
 # bindkey -e
@@ -44,6 +47,8 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+bindkey "^E" _expand_alias
 
 # ls coloring
 if [ -x /usr/bin/dircolors ]; then
