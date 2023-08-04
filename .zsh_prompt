@@ -107,6 +107,7 @@ function prompt-length() {
   fi
   echo $x
 }
+NEWLINE=$'\n'
 
 precmd() {
     myprompt;
@@ -115,5 +116,5 @@ precmd() {
     LEFTLEN=$(prompt-length {$LEFT})
     LEN=$((${COLUMNS}-${LEFTLEN}+64))
     TOP=$LEFT${(pl:$LEN:: :)RIGHT}
-    PROMPT="$TOP$ARROW "
+    PROMPT="$TOP$NEWLINE$ARROW "
 }
