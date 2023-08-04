@@ -196,6 +196,15 @@ bindsym $mod+Pause mode "$mode_system"
 for_window [class=".*"] border pixel 2
 floating_maximum_size 1270 x 720
 
+
+set $cred #ff0000
+set $cgreen #00ff00
+set $cwhite #ffffff
+set $cind #2e9ef4
+set $cbbb #885577
+set $colormain #0088DD
+set $colormain #285577
+
 # class                 border 	    backgr.     text      indicator   child_border
 client.focused 		$colormain  $colormain  $cwhite   $colormain  $colormain
 # client.focused          #4c7899 #285577 #FFFFFF #2e9ef4   #285577
@@ -220,13 +229,6 @@ mode "$mode_gaps" {
     bindsym Escape mode "default"
 }
 
-set $cred #ff0000
-set $cgreen #00ff00
-set $cwhite #ffffff
-set $cind #2e9ef4
-set $cbbb #885577
-set $colormain #0088DD
-set $colormain #285577
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -250,10 +252,10 @@ mode "resize" {
         bindsym l resize grow width $r_step px or $r_step ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width $r_step px or $r_step ppt
+        bindsym Down resize grow height $r_step px or $r_step ppt
+        bindsym Up resize shrink height $r_step px or $r_step ppt
+        bindsym Right resize grow width $r_step px or $r_step ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
