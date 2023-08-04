@@ -71,8 +71,9 @@ function myprompt() {
     PROMPT_L="%F{$FGDIR}%K{$BGDIR} $SUBS_PWD \
 %F{$BGDIR}%K{reset}${RARROW}%F{reset}%K{reset}${VENV}"
 
+    TIME=$(date "+%T")
     PROMPT_R="%F{$BGTIME}${LARROW}\
-%F{$FGTIME}%K{$BGTIME} %* \
+%F{$FGTIME}%K{$BGTIME} ${TIME} \
 %F{$BGUSER}%K{$BGTIME}${LARROW}\
 %F{$FGUSER}%K{$BGUSER} %n %F{reset}%K{reset}"
 
@@ -112,7 +113,7 @@ precmd() {
     LEFT="$PROMPT_L"
     RIGHT="$PROMPT_R"
     LEFTLEN=$(prompt-length {$LEFT})
-    LEN=$((${COLUMNS}-${LEFTLEN}+58))
+    LEN=$((${COLUMNS}-${LEFTLEN}+64))
     TOP=$LEFT${(pl:$LEN:: :)RIGHT}
     PROMPT="$TOP$ARROW "
 }
