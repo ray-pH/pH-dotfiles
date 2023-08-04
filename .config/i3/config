@@ -325,3 +325,4 @@ exec --no-startup-id i3-battery-popup -n -s ~/Code/shell/i3-battery-popup/i3-bat
 # exec --no-startup-id $HOME/Code/Latexey/linux_Latexey/Latexey
 exec --no-startup-id alttab -d 1
 exec --no-startup-id $HOME/Documents/shell/startupapp.sh
+exec --no-startup-id $HOME/Documents/shell/syncthingtmux.sh
