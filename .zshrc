@@ -3,12 +3,8 @@
 
 autoload -Uz promptinit
 promptinit
-# prompt adam1
-# custom prompt
-#
-#
-
 . ~/.zsh_prompt
+
 setopt histignorealldups sharehistory
 command_not_found_handler() {
     command-not-found $@
