@@ -42,6 +42,7 @@ alias python-http='python -m http.server'
 alias py-http='python -m http.server'
 alias font-list='fc-list'
 alias diff-color='icdiff'
+alias cal='ncal -C'
 
 # Config File Edit
 alias vv='nvim ~/.vim/init.vim'

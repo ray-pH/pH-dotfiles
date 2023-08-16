@@ -7,6 +7,7 @@ promptinit
 
 setopt histignorealldups sharehistory
 command_not_found_handler() {
+    echo "command not found"
     command-not-found $@
 }
 
@@ -15,6 +16,9 @@ command_not_found_handler() {
 # Default to Nvim
 export VISUAL=nvim
 export EDITOR=nvim
+
+# python
+export PYTHONSTARTUP=~/.pystart
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=100000
