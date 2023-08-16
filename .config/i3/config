@@ -57,9 +57,11 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
+# exec 'export PATH=$PATH:$HOME/.local/bin'
 # bindsym $mod+d exec rofi -show run -theme glue_pro_blue
-exec 'export PATH=$PATH:$HOME/.local/bin'
-bindsym $mod+d exec rofi -show run -theme glue_pro_blue
+# bindsym $mod+d exec bash -c "rofi -show run -theme glue_pro_blue"
+# exec 'export PATH=$PATH:$HOME/.local/bin'
+bindsym $mod+d exec PATH="$HOME/.local/bin:$PATH" rofi -show run -theme glue_pro_blue
 bindsym $mod+Shift+d exec rofi -show drun -theme glue_pro_blue
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
