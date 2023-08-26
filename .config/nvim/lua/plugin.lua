@@ -1,0 +1,121 @@
+-- Install package manager
+-- https://github.com/folke/lazy.nvim
+-- `:help lazy.nvim.txt` for more info
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  }
+end
+vim.opt.rtp:prepend(lazypath)
+
+require('lazy').setup({
+  -- Git related plugins
+  'tpope/vim-fugitive',
+  'tpope/vim-rhubarb',
+  'tpope/vim-surround',
+
+  -- copilot
+  'github/copilot.vim',
+
+  -- nerdtree
+  'preservim/nerdtree',
+
+  -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
+
+  -- Comment
+  'numToStr/Comment.nvim',
+
+  -- Colorizer
+  'norcalli/nvim-colorizer.lua',
+
+  -- Colorschemes
+  'navarasu/onedark.nvim',
+  'cocopon/iceberg.vim',
+  'arcticicestudio/nord-vim',
+  'tomasiser/vim-code-dark',
+  'drewtempelmeyer/palenight.vim',
+  'ayu-theme/ayu-vim',
+  'joshdick/onedark.vim',
+  'ghifarit53/tokyonight-vim',
+  'patstockwell/vim-monokai-tasty',
+  'fxn/vim-monochrome',
+  'projekt0n/github-nvim-theme',
+
+  {
+    -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      -- Automatically install LSPs to stdpath for neovim
+      { 'williamboman/mason.nvim', config = true },
+      'williamboman/mason-lspconfig.nvim',
+
+      -- Useful status updates for LSP
+      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+
+      -- Additional lua configuration, makes nvim stuff amazing!
+      'folke/neodev.nvim',
+    },
+  },
+
+  {
+    -- Autocompletion
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'L3MON4D3/LuaSnip', -- Snippet Engine & its associated nvim-cmp source
+      'saadparwaiz1/cmp_luasnip',
+      'hrsh7th/cmp-nvim-lsp', -- Adds LSP completion capabilities
+      'rafamadriz/friendly-snippets', -- Adds a number of user-friendly snippets
+    },
+  },
+
+
+  -- Fuzzy Finder (files, lsp, etc)
+  {
+    'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      -- Fuzzy Finder Algorithm which requires local dependencies to be built.
+      -- Only load if `make` is available. Make sure you have the system
+      -- requirements installed.
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        -- NOTE: If you are having trouble with this installation,
+        --       refer to the README for telescope-fzf-native for more instructions.
+        build = 'make',
+        cond = function()
+          return vim.fn.executable 'make' == 1
+        end,
+      },
+    },
+  },
+
+  -- Treesitter
+  {
+    'nvim-treesitter/nvim-treesitter',
+    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects', },
+    build = ':TSUpdate',
+  },
+
+  -- Multi cursor
+  'mg979/vim-visual-multi'
+
+}, {})
+
+
+require('pluginconf/treesitter')
+require('pluginconf/nvim-cmp')
+require('pluginconf/comment')
+require('pluginconf/lsp')
+require('colorizer').setup()
+
+-- Setup neovim lua configuration
+-- require('neodev').setup()
