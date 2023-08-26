@@ -47,6 +47,11 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+# zstyle ':completion:*:hosts' hidden true
+# ignore completion of hosts
+# zstyle ':completion:*:hosts' ignored-patterns '*(.|:)*'
+zstyle ':completion:*:hosts' ignored-patterns '*'
+
 
 bindkey "^E" _expand_alias
 
