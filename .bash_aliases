@@ -25,6 +25,8 @@ alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
 alias cp="rsync -ah --progress"
+alias vl='nvim -u ~/.config/nvim-lua/init.lua'
+alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
 
 # Typos
 alias sl='ls'
@@ -45,7 +47,8 @@ alias diff-color='icdiff'
 alias cal='ncal -C'
 
 # Config File Edit
-alias vv='nvim ~/.vim/init.vim'
+# alias vv='nvim ~/.vim/init.vim'
+alias vv='nvim ~/.vim/init.lua'
 alias vb='nvim ~/.bashrc'
 alias vz='nvim ~/.zshrc'
 alias vba='nvim ~/.bash_aliases'
