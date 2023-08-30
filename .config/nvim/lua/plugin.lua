@@ -77,9 +77,10 @@ require('lazy').setup({
     -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = {
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-nvim-lsp', -- Adds LSP completion capabilities
       'L3MON4D3/LuaSnip', -- Snippet Engine & its associated nvim-cmp source
       'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp', -- Adds LSP completion capabilities
       'rafamadriz/friendly-snippets', -- Adds a number of user-friendly snippets
     },
   },
@@ -125,11 +126,8 @@ require('lazy').setup({
   -- },
 
   -- Oil
-  {
-    'stevearc/oil.nvim',
-    opts = {},
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
+  'stevearc/oil.nvim',
+  'nvim-tree/nvim-web-devicons',
 
 }, {})
 
@@ -143,3 +141,4 @@ require('colorizer').setup()
 require('pluginconf/ipython')
 require('pluginconf/oil')
 require('pluginconf/zenmode')
+require('pluginconf/devicons')
