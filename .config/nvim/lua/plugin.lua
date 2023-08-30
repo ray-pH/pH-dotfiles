@@ -18,22 +18,29 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  'tpope/vim-surround',
 
-  -- copilot
+  -- Other
   'github/copilot.vim',
-
-  -- nerdtree
-  'preservim/nerdtree',
-
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
-
-  -- Comment
+  -- 'preservim/nerdtree',
+  'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-surround',
+  'jiangmiao/auto-pairs',
+  'deris/vim-shot-f',
   'numToStr/Comment.nvim',
-
-  -- Colorizer
   'norcalli/nvim-colorizer.lua',
+  'nvim-lualine/lualine.nvim',
+  -- 'kdheepak/tabline.nvim',
+  -- 'itchyny/lightline.vim',
+  'mg979/vim-visual-multi',
+  'lambdalisue/suda.vim',
+
+  'dstein64/vim-startuptime',
+  'leafOfTree/vim-matchtag',
+  'folke/zen-mode.nvim',
+
+  -- ipython TODO : this took too long to load
+  -- 'jpalardy/vim-slime',
+  -- 'hanschen/vim-ipython-cell',
 
   -- Colorschemes
   'navarasu/onedark.nvim',
@@ -48,6 +55,7 @@ require('lazy').setup({
   'fxn/vim-monochrome',
   'projekt0n/github-nvim-theme',
 
+  -- Plugin with configs
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -105,8 +113,23 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  -- Multi cursor
-  'mg979/vim-visual-multi'
+  -- Neotree
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   branch = "v3.x",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     -- "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+  --     "MunifTanjim/nui.nvim",
+  --   }
+  -- },
+
+  -- Oil
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
 }, {})
 
@@ -115,7 +138,8 @@ require('pluginconf/treesitter')
 require('pluginconf/nvim-cmp')
 require('pluginconf/comment')
 require('pluginconf/lsp')
+require('pluginconf/lualine')
 require('colorizer').setup()
-
--- Setup neovim lua configuration
--- require('neodev').setup()
+require('pluginconf/ipython')
+require('pluginconf/oil')
+require('pluginconf/zenmode')

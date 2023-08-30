@@ -18,16 +18,30 @@ nmap('<Leader>q', ':q<CR>')
 nmap('<Leader>v', ':vsplit<CR>')
 nmap('<Right>', ':vertical resize -5<CR>')
 nmap('<Left>', ':vertical resize +5<CR>')
-nmap('<Leader>n', ':NERDTreeToggle<CR>')
+
+-- file manager
+-- nmap('<Leader>n', ':NERDTreeToggle<CR>')
+-- nmap('<Leader>n', ':Oil<CR>')
+vim.keymap.set("n", "<leader>n", function()
+   if vim.bo.filetype == 'oil' then
+     require("oil").close()
+   else
+     require("oil").open()
+   end
+end, { desc = "File navigation" })
 
 -- clipboard
 nmap('<Leader>y', '"+y')
 vmap('<Leader>y', '"+y')
+nmap('<Leader>d', '"+d')
+vmap('<Leader>d', '"+d')
 nmap('<Leader>p', '"+p')
 nmap('<Leader>P', '"+P')
-nmap('<Leader>P', '"+P')
+-- blackhoe
 nmap('x', '"_x')
 vmap('x', '"_x')
+nmap('c', '"_c')
+vmap('c', '"_c')
 
 -- tab indenting
 vmap('<S-Tab>', '<gv')
