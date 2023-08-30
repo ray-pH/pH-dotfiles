@@ -18,14 +18,15 @@ alias vimv='vimv -v'
 alias vidir='vidir -verbose'
 alias vdd='vidir -verbose '
 alias vsd='/usr/bin/vd'
-alias vd='edir --suffix .edir'
+# alias vd='edir --suffix .edir'
+alias vd='vim .'
 alias dg='dragon -x *'
 alias sx='sxiv *.jpg *.png *.jpeg'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
 alias cp="rsync -ah --progress"
-alias vl='nvim -u ~/.config/nvim-lua/init.lua'
+alias v2='nvim -u ~/.config/nvim2/init.vim'
 alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
 
 # Typos
