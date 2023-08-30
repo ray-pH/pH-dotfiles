@@ -12,16 +12,20 @@ window:
 
 font:
     normal:
-        family: Hack
+        family: Hack Nerd Font
+        # family: Hack
+        # family: CodeNewRoman Nerd Font
+        # family : EnvyCodeR Nerd Font
+        # family : DroidSansM Nerd Font
         # style: Normal
         # family: Fantasque Sans Mono
         # family: Ubuntu Mono
         style: Normal
     # size: 13.0
-    size: 11
+    size: 11.5
     offset:
         x: 0
-        y: 2
+        y: 0
 
 # font:
 #     normal:
