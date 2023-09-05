@@ -3,6 +3,11 @@ local nmap = function(lhs,rhs) vim.keymap.set('n', lhs, rhs) end
 local vmap = function(lhs,rhs) vim.keymap.set('v', lhs, rhs) end
 local create_command = vim.api.nvim_create_user_command
 
+-- diagnostic
+-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+nmap('<Leader>dd', vim.diagnostic.open_float)
+
+
 -- Close
 nmap('<C-d>', ':q<CR>')
 
@@ -37,7 +42,7 @@ nmap('<Leader>d', '"+d')
 vmap('<Leader>d', '"+d')
 nmap('<Leader>p', '"+p')
 nmap('<Leader>P', '"+P')
--- blackhoe
+-- blackhole
 nmap('x', '"_x')
 vmap('x', '"_x')
 nmap('c', '"_c')
@@ -75,6 +80,9 @@ vmap('<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 -- copilot
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+-- ipython
+vim.keymap.set("n", "<leader>ip", ":IPythonOpen<CR>", { noremap = true, silent = true })
 
 -- " Latex only
 -- au FileType tex nnoremap j gj

@@ -6,6 +6,7 @@ require('lualine').setup({
     -- theme = 'ayu_light',
     component_separators = '|',
     section_separators = '',
+    always_divide_middle = false,
   },
   tabline = {
     lualine_a = {

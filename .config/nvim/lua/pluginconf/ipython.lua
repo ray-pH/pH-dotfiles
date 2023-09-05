@@ -10,9 +10,11 @@ function IPythonOpen()
 
   -- set slime target to new terminal
   if not vim.g.slime_default_config then
-    vim.g.slime_default_config = {}
+    -- vim.g.slime_default_config = {}
+    vim.cmd("let g:slime_default_config = {}")
   end
-  vim.g.slime_default_config["jobid"] = vim.b.terminal_job_id
+  -- vim.g.slime_default_config["jobid"] = vim.b.terminal_job_id
+  vim.cmd("let g:slime_default_config['jobid'] = b:terminal_job_id")
   -- vim.api.nvim_get_current_win().terminal_job_id
 
   vim.cmd("wincmd p") -- switch to the previous buffer
@@ -20,5 +22,4 @@ end
 -- " nnoremap <leader>ip :call IPythonOpen()<CR>
 -- " nnoremap <Leader>c :IPythonCellExecuteCell<CR>
 create_command('IPythonOpen', IPythonOpen, {})
--- vim.keymap.set("n", "<leader>ip", "IPythonOpen()", { noremap = true, silent = true })
--- vim.keymap.set("n", "<Leader>c", "IPythonCellExecuteCell()", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>cc", ":IPythonCellExecuteCell<CR>", { noremap = true, silent = true })

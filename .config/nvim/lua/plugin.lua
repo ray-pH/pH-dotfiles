@@ -38,9 +38,20 @@ require('lazy').setup({
   'leafOfTree/vim-matchtag',
   'folke/zen-mode.nvim',
 
+  'ggandor/leap.nvim',
+
   -- ipython TODO : this took too long to load
-  -- 'jpalardy/vim-slime',
-  -- 'hanschen/vim-ipython-cell',
+  {
+    'hanschen/vim-ipython-cell',
+    lazy = true,
+    cmd = "IPythonOpen",
+    dependencies = {
+      'jpalardy/vim-slime',
+    },
+    config = function()
+      require('pluginconf/ipython')
+    end
+  },
 
   -- Colorschemes
   'navarasu/onedark.nvim',
@@ -78,6 +89,7 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     dependencies = {
       'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp', -- Adds LSP completion capabilities
       'L3MON4D3/LuaSnip', -- Snippet Engine & its associated nvim-cmp source
       'saadparwaiz1/cmp_luasnip',
@@ -138,7 +150,7 @@ require('pluginconf/comment')
 require('pluginconf/lsp')
 require('pluginconf/lualine')
 require('colorizer').setup()
-require('pluginconf/ipython')
 require('pluginconf/oil')
 require('pluginconf/zenmode')
 require('pluginconf/devicons')
+require('leap').add_default_mappings()
