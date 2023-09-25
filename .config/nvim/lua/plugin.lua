@@ -20,7 +20,6 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
 
   -- Other
-  'github/copilot.vim',
   -- 'preservim/nerdtree',
   'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-surround',
@@ -30,7 +29,7 @@ require('lazy').setup({
   'norcalli/nvim-colorizer.lua',
   'nvim-lualine/lualine.nvim',
   -- 'kdheepak/tabline.nvim',
-  -- 'itchyny/lightline.vim',
+  'itchyny/lightline.vim',
   'mg979/vim-visual-multi',
   'lambdalisue/suda.vim',
 
@@ -39,7 +38,23 @@ require('lazy').setup({
   'folke/zen-mode.nvim',
 
   'ggandor/leap.nvim',
+  'junegunn/vim-easy-align',
 
+  -- AI assistant
+  -- 'github/copilot.vim',
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter',
+    config = function ()
+      vim.g.codeium_disable_bindings = 1
+    -- Change '<C-g>' here to any keycode you like.
+      vim.keymap.set('i', '<C-j>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+      vim.keymap.set('i', '<leader>]', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+      vim.keymap.set('i', '<leader>[', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+      -- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+    end
+  },
+  
   -- ipython TODO : this took too long to load
   {
     'hanschen/vim-ipython-cell',
@@ -148,7 +163,7 @@ require('pluginconf/treesitter')
 require('pluginconf/nvim-cmp')
 require('pluginconf/comment')
 require('pluginconf/lsp')
-require('pluginconf/lualine')
+-- require('pluginconf/lualine')
 require('colorizer').setup()
 require('pluginconf/oil')
 require('pluginconf/zenmode')

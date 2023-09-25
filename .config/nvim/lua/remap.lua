@@ -77,12 +77,17 @@ create_command('R', ':make', {})
 -- find and replace
 vmap('<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 
--- copilot
-vim.g.copilot_no_tab_map = true
-vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+-- -- copilot
+-- vim.g.copilot_no_tab_map = true
+-- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.g.codeium_disable_bindings = 1
 
 -- ipython
 vim.keymap.set("n", "<leader>ip", ":IPythonOpen<CR>", { noremap = true, silent = true })
+
+-- telescope
+nmap('<Leader>dd', ':Telescope diagnostics<CR>')
+nmap('<Leader>ss', ':Telescope lsp_document_symbols<CR>')
 
 -- " Latex only
 -- au FileType tex nnoremap j gj

@@ -33,7 +33,7 @@ vim.o.autowrite  = true -- save before make
 vim.o.ignorecase = true -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.smartcase  = true
 
--- vim.g.lightline = { colorscheme = 'tokyonight' }
+vim.g.lightline = { colorscheme = 'tokyonight' }
 -- vim.cmd.colorscheme 'github_dark_dimmed'
 vim.cmd.colorscheme 'iceberg'
 
