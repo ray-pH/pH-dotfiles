@@ -102,7 +102,7 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 # deno
 export DENO_INSTALL="/home/ray/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH=/home/ray/.local/bin:/sbin:/usr/sbin$PATH
+export PATH=/home/ray/.local/bin:/sbin:/usr/sbin:$PATH
 #cargo
 . "$HOME/.cargo/env"
 
@@ -135,3 +135,12 @@ function joshuto() {
             ;;
     esac
 }
+
+[ -f "/home/ray/.ghcup/env" ] && source "/home/ray/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "/home/ray/.bun/_bun" ] && source "/home/ray/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

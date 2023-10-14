@@ -6,6 +6,8 @@ alias jo='joshuto'
 alias jn='jupyter-notebook'
 alias vim='nvim'
 alias v='nvim'
+alias vdiff='nvim -d'
+alias vimdiff='nvim -d'
 alias nv='neovide'
 alias nn='nnn'
 alias vtex='nvim *.tex'
@@ -25,7 +27,7 @@ alias sx='sxiv *.jpg *.png *.jpeg'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
-alias cp="rsync -ah --progress"
+# alias cp="rsync -ah --progress"
 alias v2='nvim -u ~/.config/nvim2/init.vim'
 alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
 
@@ -46,6 +48,7 @@ alias py-http='python -m http.server'
 alias font-list='fc-list'
 alias diff-color='icdiff'
 alias cal='ncal -C'
+alias live-server='npx live-server'
 
 # Config File Edit
 # alias vv='nvim ~/.vim/init.vim'
