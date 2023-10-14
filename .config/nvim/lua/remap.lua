@@ -1,6 +1,7 @@
 -- functions
 local nmap = function(lhs,rhs) vim.keymap.set('n', lhs, rhs) end
 local vmap = function(lhs,rhs) vim.keymap.set('v', lhs, rhs) end
+local imap = function(lhs,rhs) vim.keymap.set('i', lhs, rhs) end
 local create_command = vim.api.nvim_create_user_command
 
 -- diagnostic
@@ -10,8 +11,9 @@ nmap('<Leader>dd', vim.diagnostic.open_float)
 
 -- Close
 nmap('<C-d>', ':q<CR>')
+-- nmap('<C-d>', ':bd<CR>')
 
--- Windows and Tabs
+-- Windows and Buffer
 nmap('<C-l>', '<C-w>l')
 nmap('<C-h>', '<C-w>h')
 nmap('<C-t>', ':tabnew<CR>')
@@ -19,6 +21,12 @@ nmap('<Leader>t', ':tabnew<CR>')
 nmap('<Leader>tt', ':tabnew<CR>')
 nmap('<Tab>', 'gt')
 nmap('<S-Tab>', 'gT')
+-- buffer
+-- nmap('<Leader>t', ':enew<CR>')
+-- nmap('<Leader>tt', ':enew<CR>')
+-- nmap('<Tab>', ':bnext<CR>')
+-- nmap('<S-Tab>', ':bprevious<CR>')
+-- buffer
 nmap('<Leader>q', ':q<CR>')
 nmap('<Leader>v', ':vsplit<CR>')
 nmap('<Right>', ':vertical resize -5<CR>')
@@ -78,16 +86,17 @@ create_command('R', ':make', {})
 vmap('<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 
 -- -- copilot
--- vim.g.copilot_no_tab_map = true
--- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-vim.g.codeium_disable_bindings = 1
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+nmap('<C-p>', ':Copilot panel<CR>')
+imap('<C-p>', '<C-o>:Copilot panel<CR>')
 
 -- ipython
 vim.keymap.set("n", "<leader>ip", ":IPythonOpen<CR>", { noremap = true, silent = true })
 
 -- telescope
-nmap('<Leader>dd', ':Telescope diagnostics<CR>')
 nmap('<Leader>ss', ':Telescope lsp_document_symbols<CR>')
+nmap('<Leader>sd', ':Telescope diagnostics<CR>')
 
 -- " Latex only
 -- au FileType tex nnoremap j gj

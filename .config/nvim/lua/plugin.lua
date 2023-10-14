@@ -27,7 +27,7 @@ require('lazy').setup({
   'deris/vim-shot-f',
   'numToStr/Comment.nvim',
   'norcalli/nvim-colorizer.lua',
-  'nvim-lualine/lualine.nvim',
+  -- 'nvim-lualine/lualine.nvim',
   -- 'kdheepak/tabline.nvim',
   'itchyny/lightline.vim',
   'mg979/vim-visual-multi',
@@ -41,20 +41,26 @@ require('lazy').setup({
   'junegunn/vim-easy-align',
 
   -- AI assistant
-  -- 'github/copilot.vim',
-  {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter',
-    config = function ()
-      vim.g.codeium_disable_bindings = 1
-    -- Change '<C-g>' here to any keycode you like.
-      vim.keymap.set('i', '<C-j>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<leader>]', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-      vim.keymap.set('i', '<leader>[', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-      -- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-    end
-  },
-  
+  'github/copilot.vim',
+  -- {
+  --   'Exafunction/codeium.vim',
+  --   event = 'BufEnter',
+  --   config = function ()
+  --     vim.g.codeium_disable_bindings = 1
+  --   -- Change '<C-g>' here to any keycode you like.
+  --     vim.keymap.set('i', '<C-j>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+  --     vim.keymap.set('i', '<C-q>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+  --     vim.keymap.set('i', '<C-w>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+  --     -- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+  --   end
+  -- },
+  --
+  -- {
+  --   'akinsho/bufferline.nvim',
+  --   version = "*",
+  --   dependencies = 'nvim-tree/nvim-web-devicons'
+  -- },
+
   -- ipython TODO : this took too long to load
   {
     'hanschen/vim-ipython-cell',
@@ -80,6 +86,11 @@ require('lazy').setup({
   'patstockwell/vim-monokai-tasty',
   'fxn/vim-monochrome',
   'projekt0n/github-nvim-theme',
+
+  -- svelte
+  'othree/html5.vim',
+  'pangloss/vim-javascript',
+  'evanleck/vim-svelte',
 
   -- Plugin with configs
   {
@@ -164,6 +175,7 @@ require('pluginconf/nvim-cmp')
 require('pluginconf/comment')
 require('pluginconf/lsp')
 -- require('pluginconf/lualine')
+-- require('pluginconf/bufferline')
 require('colorizer').setup()
 require('pluginconf/oil')
 require('pluginconf/zenmode')
