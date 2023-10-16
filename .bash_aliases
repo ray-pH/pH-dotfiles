@@ -27,7 +27,8 @@ alias sx='sxiv *.jpg *.png *.jpeg'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
-# alias cp="rsync -ah --progress"
+alias cp="rsync -ah --progress"
+alias cz='cd $(find . -maxdepth 3 -type d -print | fzf)'
 alias v2='nvim -u ~/.config/nvim2/init.vim'
 alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
 
