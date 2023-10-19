@@ -15,10 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
-
   -- Other
   -- 'preservim/nerdtree',
   'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
@@ -60,6 +56,15 @@ require('lazy').setup({
   --   version = "*",
   --   dependencies = 'nvim-tree/nvim-web-devicons'
   -- },
+  --
+  {
+	"tversteeg/registers.nvim",
+	name = "registers",
+	keys = {
+		{ "\"",    mode = { "n", "v" }, id = '1'},
+	},
+	cmd = "Registers",
+  },
 
   -- ipython TODO : this took too long to load
   {
@@ -74,6 +79,11 @@ require('lazy').setup({
     end
   },
 
+  -- Git related plugins
+  -- 'tpope/vim-fugitive',
+  -- 'tpope/vim-rhubarb',
+  'lewis6991/gitsigns.nvim',
+
   -- Colorschemes
   'navarasu/onedark.nvim',
   'cocopon/iceberg.vim',
@@ -86,6 +96,7 @@ require('lazy').setup({
   'patstockwell/vim-monokai-tasty',
   'fxn/vim-monochrome',
   'projekt0n/github-nvim-theme',
+  'catppuccin/vim',
 
   -- svelte
   'othree/html5.vim',
@@ -176,8 +187,10 @@ require('pluginconf/comment')
 require('pluginconf/lsp')
 -- require('pluginconf/lualine')
 -- require('pluginconf/bufferline')
+require('pluginconf/register')
 require('colorizer').setup()
 require('pluginconf/oil')
 require('pluginconf/zenmode')
 require('pluginconf/devicons')
 require('leap').add_default_mappings()
+require('pluginconf/gitsigns')

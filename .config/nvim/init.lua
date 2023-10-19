@@ -37,7 +37,7 @@ vim.g.lightline = { colorscheme = 'tokyonight' }
 -- vim.cmd.colorscheme 'github_dark_dimmed'
 vim.cmd.colorscheme 'iceberg'
 
-vim.o.foldmethod = 'syntax'
+vim.o.foldmethod = 'indent'
 vim.o.foldlevel = 99
 
 -- diagnostics
