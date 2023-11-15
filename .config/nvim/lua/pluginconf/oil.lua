@@ -64,9 +64,10 @@ require("oil").setup({
     show_hidden = false,
     -- This function defines what is considered a "hidden" file
     is_hidden_file = function(name, bufnr)
-      return vim.startswith(name, ".")
+      -- return vim.startswith(name, ".")
+      return (name ~= "..") and (name ~= ".clangd") and vim.startswith(name, ".")
     end,
-    -- This function defines what will never be shown, even when `show_hidden` is set
+     -- This function defines what will never be shown, even when `show_hidden` is set
     is_always_hidden = function(name, bufnr)
       return false
     end,

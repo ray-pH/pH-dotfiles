@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- Other
   -- 'preservim/nerdtree',
-  'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-surround',
   'jiangmiao/auto-pairs',
   'deris/vim-shot-f',
@@ -35,6 +35,9 @@ require('lazy').setup({
 
   'ggandor/leap.nvim',
   'junegunn/vim-easy-align',
+  'sirtaj/vim-openscad',
+  -- 'alfiogn/OpenFOAM-vim',
+  'lervag/vim-foam',
 
   -- AI assistant
   'github/copilot.vim',
@@ -80,7 +83,7 @@ require('lazy').setup({
   },
 
   -- Git related plugins
-  -- 'tpope/vim-fugitive',
+  'tpope/vim-fugitive',
   -- 'tpope/vim-rhubarb',
   'lewis6991/gitsigns.nvim',
 
@@ -119,6 +122,14 @@ require('lazy').setup({
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      signs = false,
+    }
   },
 
   {
@@ -176,6 +187,8 @@ require('lazy').setup({
 
   -- Oil
   'stevearc/oil.nvim',
+  -- { dir = "~/Code/nvim/oil.nvim" },
+  -- dev
   'nvim-tree/nvim-web-devicons',
 
 }, {})

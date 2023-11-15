@@ -106,3 +106,6 @@ nmap('<Leader>sd', ':Telescope diagnostics<CR>')
 -- 
 -- " FZF
 -- nnoremap <Leader>f :Files<CR>
+--
+-- fugitive
+nmap('<Leader>gg', ':vertical G<CR>')

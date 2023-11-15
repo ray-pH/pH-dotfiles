@@ -3,6 +3,7 @@
 -- autocmd Filetype octave set commentstring=%%s
 -- autocmd Filetype asm set commentstring=;%s
 -- autocmd Filetype svelte set commentstring=<!--%s-->
+
 --
 -- augroup filetypedetect
 --     au! BufRead,BufNewFile *.m,*.oct set filetype=octave
@@ -19,3 +20,6 @@ vim.filetype.add({
         mjs  = "mathjs",
     },
 })
+
+vim.cmd [[autocmd Filetype foam set commentstring=//\ %s]]
+vim.cmd [[autocmd Filetype openscad set commentstring=//\ %s]]

@@ -50,6 +50,7 @@ alias font-list='fc-list'
 alias diff-color='icdiff'
 alias cal='ncal -C'
 alias live-server='npx live-server'
+alias whatsapp='cat ~/Documents/appnote | fzf'
 
 # Config File Edit
 # alias vv='nvim ~/.vim/init.vim'
@@ -136,6 +137,7 @@ alias gp="git push"
 
 # Environment
 alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
+alias env-openfoam='source ~/App/openfoam/OpenFOAM-v2306/etc/bashrc && export VIRTUAL_ENV=openfoam_env'
 # alias wine32='WINEPREFIX=/home/ray/.local/share/wineprefixes/Win32 wine'
 alias wine32='WINEPREFIX=/media/ray/ADDITION/wineprefixes/Win32 wine'
 

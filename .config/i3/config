@@ -301,6 +301,7 @@ for_window [class="brave-browser"] border pixel 2
 for_window [class="Zotero"] floating enable
 for_window [instance="ncpamixer"] floating enable
 # Floating Godot Projects
+for_window [class="equaio_basic"] floating enable
 for_window [class="Escent"] floating enable
 for_window [class="quantumQ"] floating enable
 for_window [class="elementa"] floating enable
@@ -325,6 +326,7 @@ exec --no-startup-id fcitx5
 # exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/rainforest.jpg
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/sorai.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/Documents/shell/redshift.sh
 exec --no-startup-id sudo $HOME/Documents/shell/manualmount.sh
 # exec --no-startup-id $HOME/Documents/shell/touchpad_config.sh
 exec --no-startup-id i3-battery-popup -n -s ~/Code/shell/i3-battery-popup/i3-battery-popup.wav -L 20 -l 10 -t 1m
