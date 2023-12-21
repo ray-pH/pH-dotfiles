@@ -27,10 +27,11 @@ alias sx='sxiv *.jpg *.png *.jpeg'
 alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
-alias cp="rsync -ah --progress"
+alias ccp="rsync -ah --progress"
 alias cz='cd $(find . -maxdepth 3 -type d -print | fzf)'
 alias v2='nvim -u ~/.config/nvim2/init.vim'
 alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
+alias mamba='micromamba'
 
 # Typos
 alias sl='ls'
@@ -127,6 +128,7 @@ alias memlist='sudo lshw -short -C memory'
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gitlog1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gitlog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+alias gitlog3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%aD)%C(reset) %C(white)%s%C(reset) %C(bold yellow)%d%C(reset)' --all"
 alias sshgit="ssh-add ~/.ssh/github"
 alias gitssh="ssh-add ~/.ssh/github"
 alias sshand="ssh-add ~/.ssh/andangXeon"
@@ -138,6 +140,9 @@ alias gp="git push"
 # Environment
 alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
 alias env-openfoam='source ~/App/openfoam/OpenFOAM-v2306/etc/bashrc && export VIRTUAL_ENV=openfoam_env'
+alias env-dagmc='source ~/Code/dagmc/dagmc_env/bin/activate'
+alias env-cadquery='source ~/Code/cadquery/cadquery_env/bin/activate'
+alias env-conda='eval "$(/home/ray/App/miniconda3/bin/conda shell.zsh hook)"'
 # alias wine32='WINEPREFIX=/home/ray/.local/share/wineprefixes/Win32 wine'
 alias wine32='WINEPREFIX=/media/ray/ADDITION/wineprefixes/Win32 wine'
 

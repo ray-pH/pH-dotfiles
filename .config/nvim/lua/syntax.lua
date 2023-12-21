@@ -18,6 +18,7 @@ vim.filetype.add({
         oct  = "octave",
         edir = "edir",
         mjs  = "mathjs",
+        pro  = "prolog",
     },
 })
 

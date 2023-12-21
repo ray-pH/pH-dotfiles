@@ -144,3 +144,10 @@ function joshuto() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pmy
+# PMY_TRIGGER_KEY='^I' # tab
+PMY_TRIGGER_KEY='^[[Z' # shift tab
+eval "$(pmy init)"
+export MODULAR_HOME="/home/ray/.modular"
+export PATH="/home/ray/.modular/pkg/packages.modular.com_mojo/bin:$PATH"

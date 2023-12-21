@@ -33,7 +33,7 @@ require("oil").setup({
   -- Deleted files will be removed with the trash_command (below).
   delete_to_trash = true,
   -- Change this to customize the command used when deleting to trash
-  trash_command = "trash-put",
+  -- trash_command = "trash-put",
   -- Selecting a new/moved/renamed file or directory will prompt you to save changes first
   prompt_save_on_select_new_entry = true,
   -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
@@ -69,7 +69,8 @@ require("oil").setup({
     end,
      -- This function defines what will never be shown, even when `show_hidden` is set
     is_always_hidden = function(name, bufnr)
-      return false
+      -- return false
+      return (name == "..")
     end,
   },
   -- Configuration for the floating window in oil.open_float

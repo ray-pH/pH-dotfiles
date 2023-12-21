@@ -199,6 +199,7 @@ bindsym $mod+Pause mode "$mode_system"
 # Windows
 for_window [class=".*"] border pixel 2
 floating_maximum_size 1270 x 720
+floating_minimum_size -1 x -1
 
 
 set $cred #ff0000

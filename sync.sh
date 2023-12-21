@@ -18,3 +18,4 @@ cp ~/.config/i3/config ./.config/i3/config
 cp ~/.config/joshuto/* ./.config/joshuto/
 cp ~/.config/picom.conf ./.config/picom.conf
 cp ~/.config/polybar/* ./.config/polybar/ -r
+cp -r ~/.config/nvim/ ./.config/

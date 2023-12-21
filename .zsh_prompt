@@ -67,7 +67,10 @@ function myprompt() {
     inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
     SUBS_PWD="${PWD/#$HOME/~}"
 
-    [[ "$VIRTUAL_ENV" != "" ]] && VENV=" ${VIRTUAL_ENV##*/}"
+    VENV=""
+    [[ "$VIRTUAL_ENV" != "" ]] && VENV="${VENV} ${VIRTUAL_ENV##*/}"
+    [[ "$CONDA_DEFAULT_ENV" != "" ]] && VENV="${VENV} ${CONDA_DEFAULT_ENV}"
+# CONDA_DEFAULT_ENV
     PROMPT_L="%F{$FGDIR}%K{$BGDIR} $SUBS_PWD \
 %F{$BGDIR}%K{reset}${RARROW}%F{reset}%K{reset}${VENV}"
 
