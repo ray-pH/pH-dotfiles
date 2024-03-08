@@ -133,6 +133,10 @@ require('lazy').setup({
   },
 
   {
+    "nvim-treesitter/nvim-treesitter-context",
+  },
+
+  {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = {

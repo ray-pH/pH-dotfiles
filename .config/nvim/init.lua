@@ -39,6 +39,10 @@ vim.cmd.colorscheme 'iceberg'
 
 vim.o.foldmethod = 'indent'
 vim.o.foldlevel = 99
+vim.cmd [[
+  autocmd BufWinLeave ?* mkview
+  autocmd BufWinEnter ?* silent! loadview
+]]
 
 -- diagnostics
 -- vim.diagnostic.config({

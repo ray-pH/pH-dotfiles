@@ -21,6 +21,9 @@ nmap('<Leader>t', ':tabnew<CR>')
 nmap('<Leader>tt', ':tabnew<CR>')
 nmap('<Tab>', 'gt')
 nmap('<S-Tab>', 'gT')
+--tab
+nmap('<Leader><Right>', ':tabmove +1<CR>')
+nmap('<Leader><Left>', ':tabmove -1<CR>')
 -- buffer
 -- nmap('<Leader>t', ':enew<CR>')
 -- nmap('<Leader>tt', ':enew<CR>')

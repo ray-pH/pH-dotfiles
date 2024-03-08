@@ -28,7 +28,8 @@ alias speedtest='speedtest --bytes'
 alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
 alias ccp="rsync -ah --progress"
-alias cz='cd $(find . -maxdepth 3 -type d -print | fzf)'
+alias cz='cd $(find . -maxdepth 4 -type d -print | fzf)'
+# alias cd='z'
 alias v2='nvim -u ~/.config/nvim2/init.vim'
 alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
 alias mamba='micromamba'
@@ -67,8 +68,7 @@ alias vpoly='nvim ~/.config/polybar/config'
 alias vala='nvim ~/.config/alacritty/alacritty.yml'
 alias vfi='nvim ./.folderinfo'
 alias vj='nvim ~/.local/share/autojump/autojump.txt'
-alias vc='nvim /media/ray/STUFF/Texts/Linux/linux.md'
-alias vlinux='vc'
+alias vlinux='nvim ~/Documents/obsidian/pHoton/Computers/Linux\ Cheatsheet.md'
 alias blinux='bat /media/ray/STUFF/Texts/Linux/linux.md'
 # alias vtex='nvim ~/Code/LaTeX/sketchboard/sketch.tex'
 
@@ -131,6 +131,8 @@ alias gitlog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bo
 alias gitlog3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%aD)%C(reset) %C(white)%s%C(reset) %C(bold yellow)%d%C(reset)' --all"
 alias sshgit="ssh-add ~/.ssh/github"
 alias gitssh="ssh-add ~/.ssh/github"
+alias gitlabssh="ssh-add ~/.ssh/gitlab"
+alias sshgitlab="ssh-add ~/.ssh/gitlab"
 alias sshand="ssh-add ~/.ssh/andangXeon"
 alias andssh="ssh-add ~/.ssh/andangXeon"
 alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
@@ -158,3 +160,6 @@ alias QT-notheme='export QT_QPA_PLATFORMTHEME='
 alias sus="cat ~/Documents/shell/sus"
 alias owo="echo uwu"
 alias uwu="echo owo"
+
+# npm
+alias nb='npm run build'

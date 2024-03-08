@@ -63,4 +63,5 @@ vim.cmd('au filetype octave setlocal mp=octave\\ --persist\\ %')
 vim.cmd('au filetype asm setlocal mp=\\ \\ nasm\\ -f\\ elf64\\ %\\ &&\\ ld\\ -s\\ -o\\ %:t:r\\ %:t:r.o\\ &&\\ ./%:t:r')
 vim.cmd('au filetype prolog setlocal mp=swipl\\ -l\\ %')
 vim.cmd('au filetype glsl setlocal mp=esshader\\ -s\\ %')
+vim.cmd('au filetype ocaml setlocal mp=ocaml\\ %')
 

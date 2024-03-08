@@ -151,3 +151,6 @@ PMY_TRIGGER_KEY='^[[Z' # shift tab
 eval "$(pmy init)"
 export MODULAR_HOME="/home/ray/.modular"
 export PATH="/home/ray/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(zoxide init zsh)"
