@@ -1,0 +1,2 @@
+# Ignore stow.sh file
+^stow\.sh$
