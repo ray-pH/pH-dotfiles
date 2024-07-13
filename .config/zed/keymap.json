@@ -1,0 +1,53 @@
+[
+  {
+    "context": "menu",
+    "bindings" : {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrev"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "ctrl-a": "editor::SelectAll",
+      "shift-j": ["workspace::SendKeystrokes", "1 0 j"],
+      "shift-k": ["workspace::SendKeystrokes", "1 0 k"],
+      "shift-l": ["workspace::SendKeystrokes", "1 0 l"],
+      "shift-h": ["workspace::SendKeystrokes", "1 0 h"],
+      "space c a": "editor::ToggleCodeActions",
+      "ctrl-shift-x": "vim::DeleteRight",
+      "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-x"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "space k": "editor::Hover",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem",
+      "alt-k": "pane::ActivateNextItem",
+      "alt-j": "pane::ActivatePrevItem",
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent",
+      "x": "editor::Delete"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "ctrl-j": "editor::AcceptInlineCompletion",
+      "tab": "editor::Tab"
+      // put key-bindings here if you want them to work in insert mode
+      // e.g.
+      // "j j": "vim::NormalBefore" // remap jj in insert mode to escape.
+    }
+  }
+]
