@@ -202,6 +202,9 @@ set $ws10 "10"
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+s sticky toggle
 #
 # Scratchpad:
 #
@@ -220,8 +223,10 @@ set $ws10 "10"
     bindsym XF86MonBrightnessDown exec brightnessctl set 10-
     bindsym XF86MonBrightnessUp exec brightnessctl set 10+
     # bindsym Print exec flameshot gui
-    bindsym Print exec $HOME/Documents/shell/screenshot.sh
-    bindsym Shift+Print exec $HOME/Documents/shell/screenshot_flameshot.sh
+    # bindsym Print exec $HOME/Documents/shell/screenshot.sh
+    # bindsym Shift+Print exec $HOME/Documents/shell/screenshot_flameshot.sh
+    bindsym Shift+Print exec $HOME/Documents/shell/screenshot.sh
+    bindsym Print exec $HOME/Documents/shell/screenshot_flameshot.sh
 #
 # Resizing containers:
 #
