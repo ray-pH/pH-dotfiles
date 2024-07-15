@@ -11,6 +11,7 @@
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
       "ctrl-a": "editor::SelectAll",
+      "ctrl-j": "vim::JoinLines",
       "shift-j": ["workspace::SendKeystrokes", "1 0 j"],
       "shift-k": ["workspace::SendKeystrokes", "1 0 k"],
       "shift-l": ["workspace::SendKeystrokes", "1 0 l"],
