@@ -172,3 +172,7 @@ alias elpi='gh copilot suggest'
 alias bt='bluetoothctl'
 alias btcon='bluetoothctl connect 41:42:26:97:CF:70'
 alias btdis='bluetoothctl disconnect 41:42:26:97:CF:70'
+
+# mako notification
+alias notif-dnd-toggle='makoctl mode -t dnd'
+alias mako-dnd-toggle='makoctl mode -t dnd'
