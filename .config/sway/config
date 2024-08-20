@@ -139,6 +139,17 @@ input "1160:4178:04881080:00_0488:1052_Touchpad" {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+    # Move the current workspace left or right
+    bindsym $mod+Control+Shift+$right move workspace to output right
+    bindsym $mod+Control+Shift+$left move workspace to output left
+    bindsym $mod+Control+Shift+$down move workspace to output down
+    bindsym $mod+Control+Shift+$up move workspace to output up
+
+    # bindsym --no-repeat Semicolon seat * cursor press button1
+    # bindsym --no-repeat --release Semicolon seat * cursor release button1
+
+
 #
 # Workspaces:
 set $ws1 "1:   Main"
