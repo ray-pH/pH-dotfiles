@@ -30,6 +30,7 @@
       "shift-tab": "pane::ActivatePrevItem",
       "alt-k": "pane::ActivateNextItem",
       "alt-j": "pane::ActivatePrevItem",
+      "ctrl-d": "pane::CloseActiveItem",
     }
   },
   {

@@ -43,6 +43,6 @@
         "CSS": ["scss"]
     },
     "features": {
-      "inline_completion_provider":"copilot"
+      "inline_completion_provider":"supermaven"
     }
 }
