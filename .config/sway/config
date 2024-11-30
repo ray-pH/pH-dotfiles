@@ -115,6 +115,10 @@ input "1160:4178:04881080:00_0488:1052_Touchpad" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Middle click issue with mouse (remap alt+right click to middle click)
+    bindsym --whole-window Mod1+button3 seat seat0 cursor press BTN_MIDDLE; seat seat0 cursor release BTN_MIDDLE
+
 #
 # Moving around:
 #

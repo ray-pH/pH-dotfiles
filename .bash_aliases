@@ -30,6 +30,7 @@ alias bmon="bmon -p 'wlp*'"
 alias ros-source="source /opt/ros/noetic/setup.bash"
 alias ccp="rsync -ah --progress"
 alias cz='cd $(find . -maxdepth 4 -type d -print | fzf)'
+alias fzfr='fzf --layout=reverse'
 # alias cd='z'
 alias v2='nvim -u ~/.config/nvim2/init.vim'
 alias vk='nvim -u ~/.config/kickstart-nvim/init.lua'
@@ -135,6 +136,7 @@ alias sshbubo="ssh-add ~/.ssh/bubo"
 alias gitlabssh="ssh-add ~/.ssh/bubo"
 alias sshgitlab="ssh-add ~/.ssh/bubo"
 alias gp="git push"
+alias gx="git cherry-pick -x"
 
 # Environment
 # alias env-openmc='source ~/Code/openmc/openmc_env/bin/activate'
