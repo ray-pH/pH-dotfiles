@@ -34,3 +34,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export EDITOR=~/.local/bin/nvim
 # export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/$(whoami)/.local/share/flatpak/exports/share
+
+# https://bbs.archlinux.org/viewtopic.php?id=295358
+XDG_MENU_PREFIX=plasma- kbuildsycoca6
