@@ -19,8 +19,11 @@ vim.filetype.add({
         edir = "edir",
         mjs  = "mathjs",
         pro  = "prolog",
+        asm  = "nasm",
+        hx   = "haxe",
     },
 })
 
 vim.cmd [[autocmd Filetype foam set commentstring=//\ %s]]
 vim.cmd [[autocmd Filetype openscad set commentstring=//\ %s]]
+vim.cmd [[autocmd Filetype nasm set commentstring=;\ %s]]
