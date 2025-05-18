@@ -7,16 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "show_edit_predictions": true,
+    "show_inline_completions": true,
     "languages": {
         "Dart": {
-            "show_edit_predictions": true
+            "show_inline_completions": true
         },
         "TypeScript": {
-            "show_edit_predictions": true
+            "show_inline_completions": true
         },
         "JSDoc": {
-          "show_edit_predictions": true
+          "show_inline_completions": true
         }
     },
     "base_keymap": "VSCode",
@@ -43,8 +43,8 @@
     "file_types": {
         "CSS": ["scss"]
     },
-    "show_edit_predictions_in_menu": false,
+    "show_inline_completions_in_menu": false,
     "features": {
-      "edit_prediction_provider":"supermaven"
+      "inline_completion_provider":"supermaven"
     }
 }
