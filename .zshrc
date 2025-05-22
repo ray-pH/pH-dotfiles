@@ -97,6 +97,19 @@ function yy(){
     readlink -fn "$1" | wl-copy
 }
 
+fzf-history-widget() {
+  local selected
+  selected=$(fc -l 1 | sed 's/^[ ]*[0-9]\+[ ]*//' |
+    fzf --reverse --prompt='History> ' --height=40% \
+        --bind 'tab:down,shift-tab:up')
+  if [[ -n "$selected" ]]; then
+    LBUFFER="$selected"
+    zle redisplay
+  fi
+}
+zle -N fzf-history-widget
+bindkey '^R' fzf-history-widget
+
 # ssh
 if [ -z "$SSH_AUTH_SOCK" ]; then
   eval `ssh-agent -s` > /dev/null
